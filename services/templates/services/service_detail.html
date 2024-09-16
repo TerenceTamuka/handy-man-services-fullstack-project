@@ -1,0 +1,12 @@
+{% extends 'services/base.html' %}
+
+{% block content %}
+    <h2>{{ service.name }}</h2>
+    <p>{{ service.description }}</p>
+    <p>Price: £{{ service.price }}</p>
+    {% if user.is_authenticated %}
+        <a href="{% url 'create_booking' %}">Book this Service</a>
+    {% else %}
+        <p>Please <a href="{% url 'login' %}">login</a> to book.</p>
+    {% endif %}
+{% endblock %}
