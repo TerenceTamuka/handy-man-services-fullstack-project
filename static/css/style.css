@@ -1,0 +1,18 @@
+body {
+    background-color: #264768;
+    max-width: 125rem;
+    margin: 0 auto;
+}
+.brand {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #41bf07;
+}
+
+.jumbotron {
+    background-image: url("../images/hero.webp");
+    background-size: cover;
+    padding-top: 1%;
+    padding-bottom: 25%;
+}

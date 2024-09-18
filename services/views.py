@@ -5,10 +5,13 @@ from .forms import BookingForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, authenticate
 
-def home(request):
+def index(request):
     services = Service.objects.all()
-    return render(request, 'services/home.html', {'services': services})
-
+    context = {
+        'services': services
+    }
+    return render(request, 'services/index.html', context)
+    
 def service_detail(request, pk):
     service = get_object_or_404(Service, pk=pk)
     return render(request, 'services/service_detail.html', {'service': service})

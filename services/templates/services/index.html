@@ -1,0 +1,43 @@
+{% extends 'services/base.html' %}
+{% block body_class %}{}{% endblock %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="container-fluid">
+    <!-- Hero Section -->
+    <div class="jumbotron jumbotron-img text-center" style="background-image: url('https://res.cloudinary.com/your-cloudinary-url/hero-image.jpg'); background-size: cover; height: 60vh; display: flex; align-items: center; justify-content: center; color: white;">
+        <div class="welcome-text">
+            <h1>Welcome to Apple-gate Property Services LTD</h1>
+            <h4>Don't hesitate to book a service for your household handyman needs</h4>
+            <p class="quote-text">Where your home meets quality and care</p>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="row mt-4">
+        {% for service in services %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <!-- Display the Service Image (Cloudinary) -->
+                <div class="image-container">
+                    {% if service.featured_image %}
+                        <img class="card-img-top" src="{{ service.featured_image.url }}" alt="{{ service.name }}">
+                    {% else %}
+                        <img class="card-img-top" src="https://res.cloudinary.com/your-cloudinary-url/placeholder.jpg" alt="Default service image">
+                    {% endif %}
+                </div>
+
+                <!-- Service Information -->
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ service.name }}</h5>
+                    <p class="card-text">{{ service.description }}</p>
+                    <h6 class="card-price">Price from £{{ service.price }}</h6>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
