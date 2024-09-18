@@ -18,8 +18,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    path('my_bookings/', include('services.urls'), name = "services-urls"),
+    path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
-    path('', include('services.urls')),
     path('accounts/', include('django.contrib.auth.urls')),  # Login, logout
     path('summernote/', include('django_summernote.urls')),  # Summernote URLs
+    path('', include('services.urls')),  # Default URL
 ]
