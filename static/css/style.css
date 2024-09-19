@@ -93,3 +93,24 @@ body {
     border-color: #4A7A56; /* Change border color on hover */
     color: #fff; /* Ensure text color stays white */
 }
+
+
+.footer-bg {
+    color: #fff;
+}
+
+.fab {
+    background-color: #3C5F43;
+    color: #fff;
+    border: 2px solid #2E4A35; /* Add a border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.fab:hover{
+    background-color: #4A7A56; /* Change background color on hover */
+    border-color: #4A7A56; /* Change border color on hover */
+    color: #fff; /* Ensure text color stays white */
+}
