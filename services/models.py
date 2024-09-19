@@ -5,9 +5,9 @@ from django.utils import timezone
 
 class Service(models.Model):
     SERVICE_CHOICES = [
-        ('Painting', 'Painting from £200'),
-        ('Assembling', 'Assembling Drawers from £50'),
-        ('Packing & Moving', 'Packing & Moving from £100'),
+        ('Painting', 'Painting - Price from £100'),
+        ('Assembling', 'Assembling Furniture and Units - Price from £50'),
+        ('Packing & Moving', 'Packing & Moving - Price from £100'),
     ]
     name = models.CharField(max_length=100, choices=SERVICE_CHOICES)
     price = models.DecimalField(max_digits=6, decimal_places=2)

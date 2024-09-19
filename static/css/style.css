@@ -1,5 +1,5 @@
 body {
-    background-color: #082645;
+    background-color: #3C5F43;
     max-width: 125rem;
     margin: 0 auto;
     font-family: "Josefin Sans", sans-serif;
@@ -9,8 +9,19 @@ body {
     /* font-family: "Josefin Sans", sans-serif; */
     font-size: 1.4rem;
     font-weight: 700;
-    color: #461ef6;
+    color: #051be7;
+    transition: ease .40s;
 }
+
+
+.navbar-brand .brand:hover{
+    background: #1070f6;
+    color: #062c19;
+    box-shadow: 8px 8px  rgb(85 85 85 / 40%);
+    border-radius: 70px;
+    transform: scale(1.2);
+}
+
 
 .jumbotron {
     background-image: url("../images/hero.webp");
@@ -19,6 +30,7 @@ body {
     padding-bottom: 25%;
     max-height: 100%;
 }
+
 
 .welcome-text {
     color: #fff;
@@ -29,4 +41,23 @@ body {
 
 .text-black {
     color: black;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #3C5F43;
+}
+
+.card-text {
+    color: #3C5F43;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+.card-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    color: #3C5F43;
 }
