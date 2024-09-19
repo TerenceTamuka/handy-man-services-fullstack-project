@@ -9,13 +9,13 @@ body {
     /* font-family: "Josefin Sans", sans-serif; */
     font-size: 1.4rem;
     font-weight: 700;
-    color: #051be7;
+    color: #062c19;
     transition: ease .40s;
 }
 
 
 .navbar-brand .brand:hover{
-    background: #1070f6;
+    background: #4A7A56;
     color: #062c19;
     box-shadow: 8px 8px  rgb(85 85 85 / 40%);
     border-radius: 70px;
@@ -60,4 +60,36 @@ body {
     font-weight: 700;
     margin-top: 1rem;
     color: #3C5F43;
+}
+
+.btn-signup {
+    background-color: #3C5F43;
+    color: #fff;
+    border: 2px solid #2E4A35; /* Add a border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; /* Smooth transition effect */
+}
+
+.btn-signup:hover {
+    background-color: #4A7A56; /* Change background color on hover */
+    border-color: #4A7A56; /* Change border color on hover */
+    color: #fff; /* Ensure text color stays white */
+}
+
+.btn-block {
+    background-color: #3C5F43;
+    color: #fff;
+    border: 2px solid #2E4A35; /* Add a border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; 
+}
+
+.btn-block:hover{
+    background-color: #4A7A56; /* Change background color on hover */
+    border-color: #4A7A56; /* Change border color on hover */
+    color: #fff; /* Ensure text color stays white */
 }
