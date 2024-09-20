@@ -1,18 +1,116 @@
 body {
-    background-color: #264768;
+    background-color: #3C5F43;
     max-width: 125rem;
     margin: 0 auto;
+    font-family: "Josefin Sans", sans-serif;
+    color: #fff;
 }
 .brand {
-    font-family: "Josefin Sans", sans-serif;
+    /* font-family: "Josefin Sans", sans-serif; */
     font-size: 1.4rem;
     font-weight: 700;
-    color: #41bf07;
+    color: #062c19;
+    transition: ease .40s;
 }
+
+
+.navbar-brand .brand:hover{
+    background: #4A7A56;
+    color: #041d17;
+    box-shadow: 8px 8px  rgb(90 185 185 / 40%);
+    border-radius: 70px;
+    transform: scale(1.2);
+}
+
 
 .jumbotron {
     background-image: url("../images/hero.webp");
     background-size: cover;
-    padding-top: 1%;
+    padding-top: 10%;
     padding-bottom: 25%;
+    max-height: 100%;
+}
+
+
+.welcome-text {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.text-black {
+    color: black;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #3C5F43;
+}
+
+.card-text {
+    color: #3C5F43;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+.card-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    color: #3C5F43;
+}
+
+.btn-signup {
+    background-color: #3C5F43;
+    color: #fff;
+    border: 2px solid #2E4A35; /* Add a border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; /* Smooth transition effect */
+}
+
+.btn-signup:hover {
+    background-color: #4A7A56; /* Change background color on hover */
+    border-color: #4A7A56; /* Change border color on hover */
+    color: #fff; /* Ensure text color stays white */
+}
+
+.btn-block {
+    background-color: #3C5F43;
+    color: #fff;
+    border: 2px solid #2E4A35; /* Add a border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; 
+}
+
+.btn-block:hover{
+    background-color: #4A7A56; /* Change background color on hover */
+    border-color: #4A7A56; /* Change border color on hover */
+    color: #fff; /* Ensure text color stays white */
+}
+
+
+.footer-bg {
+    color: #fff;
+}
+
+.fab {
+    background-color: #3C5F43;
+    color: #fff;
+    border: 2px solid #2E4A35; /* Add a border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.fab:hover{
+    background-color: #4A7A56; /* Change background color on hover */
+    border-color: #4A7A56; /* Change border color on hover */
+    color: #fff; /* Ensure text color stays white */
 }

@@ -16,8 +16,8 @@ body {
 
 .navbar-brand .brand:hover{
     background: #4A7A56;
-    color: #062c19;
-    box-shadow: 8px 8px  rgb(85 85 85 / 40%);
+    color: #041d17;
+    box-shadow: 8px 8px  rgb(90 185 185 / 40%);
     border-radius: 70px;
     transform: scale(1.2);
 }
