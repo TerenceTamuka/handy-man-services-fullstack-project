@@ -25,6 +25,12 @@ def my_bookings(request):
 
 @login_required
 def create_booking(request):
+    # Get the service from the query parameter if it exists
+    service_id = request.GET.get('service_id')
+    service = None
+    if service_id:
+        service = get_object_or_404(Service, id=service_id)
+    
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
@@ -43,9 +49,9 @@ def create_booking(request):
                 messages.success(request, 'Booking created successfully!')
                 return redirect('my_bookings')
     else:
-        form = BookingForm()
+        form = BookingForm(initial={'service': service})
     
-    return render(request, 'services/booking_form.html', {'form': form})
+    return render(request, 'services/booking_form.html', {'form': form, 'service': service})
 
 @login_required
 def update_booking(request, pk):
