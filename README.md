@@ -135,6 +135,15 @@ __F09 PostgreSQL Database__
 
 -   ### Wireframes
 
+  -__Home Page Unregistered user view__
+
+![Desktop view of an unregistered user](static/images/desktop-view-homepage-unregistered-user-view.png)
+
+<hr>
+
+  -__Home Page Registered user view__
+![Desktop view of a registered user](static/images/desktop-view-homepage-registered-user-view.png)
+
   
 
 -   ### Entity-Relationship diagrams for DBMS
