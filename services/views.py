@@ -4,11 +4,13 @@ from .models import Service, Booking
 from .forms import BookingForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, authenticate
+from django.contrib import messages
 
 def index(request):
     services = Service.objects.all()
     context = {
-        'services': services
+        'services': services,
+        'is_authenticated': request.user.is_authenticated  # Pass authentication status
     }
     return render(request, 'services/index.html', context)
     
@@ -27,11 +29,22 @@ def create_booking(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             booking = form.save(commit=False)
-            booking.user = request.user
-            booking.save()
-            return redirect('my_bookings')
+            # Check for overlapping bookings
+            overlapping_booking = Booking.objects.filter(
+                service=booking.service,
+                date_time=booking.date_time
+            ).exists()
+
+            if overlapping_booking:
+                form.add_error(None, 'This service is already booked at the selected time.')
+            else:
+                booking.user = request.user
+                booking.save()
+                messages.success(request, 'Booking created successfully!')
+                return redirect('my_bookings')
     else:
         form = BookingForm()
+    
     return render(request, 'services/booking_form.html', {'form': form})
 
 @login_required
@@ -64,3 +77,4 @@ def register(request):
     else:
         form = UserCreationForm()
     return render(request, 'registration/signup.html', {'form': form})
+

@@ -1,12 +1,134 @@
 {% extends 'base.html' %}
-
+{% block body_class %}{ }{% endblock %}
+{% load static %}
 {% block content %}
-    <h2>{{ service.name }}</h2>
-    <p>{{ service.description }}</p>
-    <p>Price: £{{ service.price }}</p>
-    {% if user.is_authenticated %}
-        <a href="{% url 'create_booking' %}">Book this Service</a>
-    {% else %}
-        <p>Please <a href="{% url 'login' %}">login</a> to book.</p>
-    {% endif %}
-{% endblock %}
+
+{% load crispy_forms_tags %}
+
+<div class="masthead">
+    <div class="container">
+        <div class="row g-0">
+            <div class="d-block col-lg-8 masthead-image">
+                {% if "placeholder" in service.featured_image.url %}
+                <img src="https://res.cloudinary.com/dtqyltolm/image/upload/v1727104526/packing_hqpyws.png" alt="Default packing image">
+                {% else %}
+                <img src="{{ service.featured_image.url }}" alt="{{ service.name }}">
+                {% endif %}
+            </div>
+            <div class="col-lg-4 masthead-text">
+                <h1 class="service-detail-title">{{ service.name }}</h1>
+                <p class="service-subitem">
+                    Service: {{ service.name }}<br>
+                    Price From: £{{ service.price }}
+                </p>
+
+                <!-- Only authenticated users can book a service -->
+                {% if user.is_authenticated %}
+                <div class="service-subitem booking-panel">
+                    <h3>Book This Service</h3>
+                    <form action="{% url 'service_book' service.id %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="scheduleFormControlSelect">Scheduled Service</label>
+                            <select class="form-select" id="scheduleFormControlSelect" name="sched_id">
+                                {% for scheduled_service in service.scheduled_service.all %}
+                                <option value="{{ scheduled_service.id }}">{{ scheduled_service.name }}</option>
+                                {% endfor %}
+                            </select>
+                            <br>
+                            <button type="submit" class="btn btn-primary btn-block btn-form"
+                                {% if scheduled_service|length == 0 %} disabled {% endif %}>Book</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Display User's Upcoming Bookings -->
+                <h3>Your Upcoming Bookings</h3>
+                <ul class="list-group">
+                    {% for booking in user.bookings %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{ booking.service.name }} on {{ booking.date_time|date:"F j, Y, g:i a" }}
+
+                        <!-- Buttons for CRUD operations -->
+                        <div>
+                            <!-- Edit Booking Button -->
+                            <a href="{% url 'edit_booking' booking.id %}" class="btn btn-sm btn-outline-info">Edit</a>
+                            <!-- Delete Booking Button -->
+                            <form action="{% url 'delete_booking' booking.id %}" method="POST" style="display:inline;">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                            </form>
+                        </div>
+                    </li>
+                    {% empty %}
+                    <li class="list-group-item">You have no upcoming bookings.</li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p>Please <a href="{% url 'login' %}">log in</a> to book this service.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col card mb-4 mt-3">
+            <div class="card-body">
+                <div class="card-text">
+                    {{ service.content|safe }}
+                    <br> Details Created: {{ service.created_on }} <br>
+                    Last Updated: {{ service.updated_on }} <br>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        {% if user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'service_like' service.slug %}" method="POST">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-like">
+                                <i class="{% if liked %}fas{% else %}far{% endif %} fa-heart"></i>
+                            </button>
+                        </form>
+                        {% else %}
+                        <i class="far fa-heart"></i>
+                        {% endif %}
+                        <strong>{{ service.number_of_likes }}</strong>
+                    </div>
+                    <div class="col-sm-2">
+                        <i class="far fa-comments"></i> {{ comments.count }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comments Section -->
+    <div class="row">
+        <div class="col-md-8 card mb-4 mt-3">
+            <h3>Comments:</h3>
+            <div class="card-body">
+                {% for comment in comments %}
+                <div class="comments">
+                    <p><strong>{{ comment.username }}</strong> on {{ comment.created_on }}:</p>
+                    <p>{{ comment.message|linebreaks }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-4 card mb-4 mt-3">
+            <div class="card-body">
+                {% if user.is_authenticated %}
+                <h3>Leave a Comment:</h3>
+                <form method="post" class="comment-form">
+                    {{ comment_form|crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
