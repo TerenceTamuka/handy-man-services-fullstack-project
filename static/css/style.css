@@ -36,9 +36,25 @@ body {
     padding-top: 10%;
     padding-bottom: 25%;
     max-height: 100%;
-    color: white; /* Ensure text is visible on dark background */
+    color: white; 
     z-index: 1;
     
+    
+}
+.fa-phone{
+    font-size: 2rem;
+    color: #0000dc;
+    margin-bottom: 1rem;
+}
+.fa-check-circle{
+    font-size: 2rem;
+    color: #00cc00;
+    margin-bottom: 1rem;
+}
+.fa-question-circle{
+    font-size: 2rem;
+    color: #ff851b;
+    margin-bottom: 1rem;
 }
 
 
@@ -50,6 +66,7 @@ body {
     padding: 1rem 0.5rem;
     background-color: rgba(4, 95, 39, 0.811);
     margin: 0 10%;
+    
 }
 .bookings-update-message {
     color: #fff;
