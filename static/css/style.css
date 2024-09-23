@@ -24,7 +24,7 @@ body {
 
 
 .jumbotron {
-    background-image: url("../images/heroImage.png");
+    background-image: url("django-summernote/2024-09-19/heroImage.png");
     background-size: cover;
     padding-top: 10%;
     padding-bottom: 25%;
