@@ -25,6 +25,7 @@ class Booking(models.Model):
     customer_phone = models.CharField(max_length=15)
     date_time = models.DateTimeField()
     additional_info = models.TextField(blank=True, null=True)
+    approved = models.BooleanField(default=False) #approving customer bookings
 
     def __str__(self):
         return f"{self.customer_name} - {self.service.name} on {self.date_time}"

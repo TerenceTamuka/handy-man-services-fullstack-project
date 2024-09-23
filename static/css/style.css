@@ -22,6 +22,13 @@ body {
     transform: scale(1.2);
 }
 
+.booking-summary{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(4, 95, 39, 0.811);
+}
 
 .jumbotron {
     background-image: url("https://res.cloudinary.com/dtqyltolm/image/upload/v1727095474/heroImage_x2y8vk.png");
@@ -29,7 +36,8 @@ body {
     padding-top: 10%;
     padding-bottom: 25%;
     max-height: 100%;
-    
+    color: white; /* Ensure text is visible on dark background */
+    z-index: 1;
     
 }
 
@@ -51,6 +59,7 @@ body {
     padding: 1rem 0.5rem;
     background-color: rgba(4, 95, 39, 0.811);
     margin: 0 10%;
+    
 }
 
 
