@@ -24,11 +24,13 @@ body {
 
 
 .jumbotron {
-    background-image: url("django-summernote/2024-09-19/heroImage.png");
+    background-image: url("https://res.cloudinary.com/dtqyltolm/image/upload/v1727095474/heroImage_x2y8vk.png");
     background-size: cover;
     padding-top: 10%;
     padding-bottom: 25%;
     max-height: 100%;
+    
+    
 }
 
 
@@ -38,7 +40,7 @@ body {
     font-weight: 700;
     text-align: center;
     padding: 1rem 0.5rem;
-    background-color: rgba(7, 148, 99, 0.811);
+    background-color: rgba(4, 95, 39, 0.811);
     margin: 0 10%;
 }
 
