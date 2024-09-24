@@ -84,3 +84,23 @@ def register(request):
         form = UserCreationForm()
     return render(request, 'registration/signup.html', {'form': form})
 
+@login_required
+def edit_booking(request, booking_id):
+    # Get the booking instance by its ID
+    booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+    
+    # Ensure the booking belongs to the logged-in user
+    if booking.user != request.user:
+        return redirect('my_bookings')  # Redirect if user is not the owner of the booking
+
+    # Process form submission
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()  # Save the changes
+            return redirect('my_bookings')  # Redirect to the bookings page or a confirmation page
+    else:
+        form = BookingForm(instance=booking)  # Pre-fill the form with the current booking info
+    
+    return render(request, 'services/edit_booking.html', {'form': form, 'booking': booking})
+

@@ -155,3 +155,30 @@ body {
     border-color: #4A7A56; /* Change border color on hover */
     color: #fff; /* Ensure text color stays white */
 }
+
+/* Change color of customer phone number */
+.booking-icons .fas.fa-phone {
+    color: #0805ad; /* Blue color for phone icon */
+}
+
+.booking-icons .customer-phone {
+    color: #0805ad; /* Blue color for the phone number text */
+}
+
+/* Change color of "Confirmed" text */
+.booking-icons .fas.fa-check-circle {
+    color: #0bff44; /* Green color for the check icon */
+}
+
+.booking-icons .confirmed {
+    color: #0bff44; /* Green color for "Confirmed" text */
+}
+
+/* Change color of "Awaiting Confirmation" text */
+.booking-icons .fas.fa-question-circle {
+    color: #ffc107; /* Yellow color for the question icon */
+}
+
+.booking-icons .awaiting-confirmation {
+    color: #ffc107; /* Yellow color for "Awaiting Confirmation" text */
+}

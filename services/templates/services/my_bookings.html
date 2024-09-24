@@ -29,18 +29,20 @@
                             <p>
                                 <strong>Service Info:</strong> {{ booking.service.description }}<br>
                                 <strong>Price:</strong> £{{ booking.service.price }}<br>
+                                <strong>Customer Additional Info:</strong> {{booking.additional_info}}<br>
                                 <strong>Date & Time:</strong> {{ booking.date_time|date:"F j, Y, g:i a" }}
+                                
                             </p>
                             <div class="booking-icons">
                                 <div class="row">
                                     <div class="col-auto">
-                                        <p class="card-text text-muted h6"><i class="fas fa-phone"></i> {{ booking.customer_phone }}</p>
+                                        <p class="card-text customer-phone h6"><i class="fas fa-phone"></i> {{ booking.customer_phone }}</p>
                                     </div>
                                     <div class="col">
                                         {% if booking.approved %}
-                                        <p class="card-text text-muted h6"><i class="fas fa-check-circle"></i> Confirmed</p>
+                                        <p class="card-text confirmed h6"><i class="fas fa-check-circle"></i> Confirmed</p>
                                         {% else %}
-                                        <p class="card-text text-muted h6"><i class="fas fa-question-circle"></i> Awaiting Confirmation</p>
+                                        <p class="card-text awaiting-confirmation h6"><i class="fas fa-question-circle"></i> Awaiting Confirmation</p>
                                         {% endif %}
                                     </div>
                                 </div>
@@ -53,6 +55,20 @@
                             </form>
                         </div>
                     </div>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{ booking.service.name }} on {{ booking.date_time|date:"F j, Y, g:i a" }}
+                    
+                        <!-- Buttons for CRUD operations -->
+                        <div>
+                            <!-- Edit Booking Button -->
+                            <a href="{% url 'edit_booking' booking.id %}" class="btn btn-sm btn-outline-info">Edit</a>
+                            <!-- Delete Booking Button -->
+                            <form action="{% url 'delete_booking' booking.id %}" method="POST" style="display:inline;">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                            </form>
+                        </div>
+                    </li>
                 </div>
                 {% empty %}
                 <p class="bookings-update-message">You currently have no upcoming bookings.</p>
