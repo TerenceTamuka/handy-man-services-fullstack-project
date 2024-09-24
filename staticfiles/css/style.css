@@ -22,13 +22,39 @@ body {
     transform: scale(1.2);
 }
 
+.booking-summary{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(4, 95, 39, 0.811);
+}
 
 .jumbotron {
-    background-image: url("../images/hero.webp");
+    background-image: url("https://res.cloudinary.com/dtqyltolm/image/upload/v1727095474/heroImage_x2y8vk.png");
     background-size: cover;
     padding-top: 10%;
     padding-bottom: 25%;
     max-height: 100%;
+    color: white; 
+    z-index: 1;
+    
+    
+}
+.fa-phone{
+    font-size: 2rem;
+    color: #0000dc;
+    margin-bottom: 1rem;
+}
+.fa-check-circle{
+    font-size: 2rem;
+    color: #00cc00;
+    margin-bottom: 1rem;
+}
+.fa-question-circle{
+    font-size: 2rem;
+    color: #ff851b;
+    margin-bottom: 1rem;
 }
 
 
@@ -37,7 +63,22 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     text-align: center;
+    padding: 1rem 0.5rem;
+    background-color: rgba(4, 95, 39, 0.811);
+    margin: 0 10%;
+    
 }
+.bookings-update-message {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    background-color: rgba(4, 95, 39, 0.811);
+    margin: 0 10%;
+    
+}
+
 
 .text-black {
     color: black;
