@@ -135,14 +135,39 @@ __F09 PostgreSQL Database__
 
 -   ### Wireframes
 
-  -__Home Page Unregistered user view__
+  -__Desktop-View - Home Page Unregistered user view__
 
 ![Desktop view of an unregistered user](static/images/desktop-view-homepage-unregistered-user-view.png)
 
 <hr>
 
-  -__Home Page Registered user view__
+  -__Desktop-View - Home Page Registered user view__
 ![Desktop view of a registered user](static/images/desktop-view-homepage-registered-user-view.png)
+
+<hr>
+
+__Desktop-View - My Bookings Page__
+![Desktop view of My Bookings page](static/images/desktop-view-mybookings-page.png)
+
+<hr>
+
+__Desktop-View - Edit Booking Page__
+![Desktop view of Edit Booking page](static/images/desktop-view-editbooking-page.png)
+
+<hr>
+
+__Desktop-View - Register Page__
+![Desktop view of Registration form page](static/images/desktop-view-registrationform-page.png)
+
+<hr>
+
+__Desktop-View - Login Page__
+![Desktop view of Login page](static/images/desktop-view-loginpage.png)
+
+<hr>
+
+__Desktop-View - Logout Page__
+![Desktop view of Logout page](static/images/desktop-view-logoutpage.png)
 
   
 
