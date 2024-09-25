@@ -169,6 +169,11 @@ __Desktop-View - Login Page__
 __Desktop-View - Logout Page__
 ![Desktop view of Logout page](static/images/desktop-view-logoutpage.png)
 
+<hr>
+
+__Desktop-View - Book a service Page__
+![Desktop view of Book a service Page](static/images/desktop-view-bookaservice-page.png)
+
   
 
 -   ### Entity-Relationship diagrams for DBMS
