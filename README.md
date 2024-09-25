@@ -75,34 +75,56 @@ Applegate Property Services LTD is a full-fledged web application built using th
 
 ### Existing Features
 
-__F01 Homepage with Hero Section and Services Grid__
+ - __F01 Navigation Bar:__
 
- - *__Hero Section:__* 
+The navigation bar provides a consistent design and placement across all pages, ensuring easy and intuitive access to key sections of the site. It features a company logo alongside a link to the homepage for quick navigation. When a user is not logged in, options to register or sign in are prominently displayed. Once a user is signed in, the navigation adjusts to show links for My Bookings and Sign Out, alongside a personalized touch with the user's name and a user icon.
 
-- *__Services Grid:__* 
-- *__Navigation Bar:__*
+Designed with responsiveness in mind, the navigation bar adapts seamlessly to various screen sizes. On smaller devices, it transforms into a compact 'hamburger' menu, allowing for smooth access to all the necessary links without cluttering the interface.
 
-__F02 Service Detail Pages__
+![Navbar view for an unregistered user](static/images/navbar-unregistereduser-view.png)
+![Navbar view for a registered user](static/images/navbar-registereduser-desktop-view.png)
+![Navbar responsive view on smaller devices](static/images/navbar-responsive-view.png)
+<hr>
 
-- *__Dynamic Service Pages:__* 
-- *__Booking Button__* 
+-__F02 Landing page, name & text__
+
+At the top of the landing page (home page) there is an area that includes an AI generated handyman photograph simulating the activities of given services and a text overlay which together clearly identify the purpose of the site as a place to find and book household services from a company called Apple-gate Property Services LTD.
+
+![Landing page with hero image and text](static/images/landingpage-name-text.png)
+<hr>
+
+- __Booking Button__
+
+When an authenticated user is logged in, a *Book a Service* button will be displayed at the bottom of each service column that displays a feature service image, service description and service price information.
+
+![Booking button for authenticated user feature](static/images/book-button.png)
 
 __F03 User Authentication (Register, Login, Logout)__
 
-- *__Register:__* 
+User authentication methods were implemented to ensure that if a user wants to book a service, they would either have to login if they are already registered or register first then make a booking request.
+
+Login and logout pages were created to facilitate full and secure authentication. Each time a user logs in or out, a session message feedback displays below the navbar.
+
+- *__Register or Sign in to book a service:__* 
+![Registration form](static/images/registration-form.png)
+![Prompt for if user wants to book a service](static/images/sign-in-prompt-to-book.png)
 
 - *__Login/Logout__* 
+![login form](static/images/login-form.png)
+![logout form](static/images/secure-logout-form.png)
+
 - *__Session Management:__*
+![feedback messsage for when user signs in](static/images/user-sign-in-feedback.png)
+![feedback for when user logs out](static/images/logout-feedback-message.png)
+
 __F04 Booking System__
 
 - *__Booking Form:__* 
 - *__Service Selection with Prices:__*
-- *__Date and Time Validation:__*
-   
+- *__Date and Time Validation:__*   
 - *__Business Hours:__*
-
-
 - *__CRUD (Create, Read, Update, Delete) Functionality:__*
+
 __F05 My Bookings Page__ 
 
 - *__Booking Management:__* 
@@ -110,16 +132,18 @@ __F05 My Bookings Page__
 __F06 Quotations Page (Services Overview)__
 
 - *__Service Carousel:__*
-
 - *__Coherent Service Prices:__* 
+
 __F07 Responsive Design with Bootstrap__
 
-- *__Bootstrap Integration:__* T
+- *__Bootstrap Integration:__* 
 - *__Form Styling:__* 
+
 __F08 About Us Page__
 
 - *__Eye-Catching Theme:__* 
 - *__Content Focused on Trust:__* 
+
 __F09 PostgreSQL Database__
 
 - *__Database Intergration:__* 
