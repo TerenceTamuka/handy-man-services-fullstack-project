@@ -1,19 +1,19 @@
 <h1 align="center">Apple-gate Property Services LTD - Handyman Services</h1>
 
-[View the live project here]()
+[View the live project here](https://handyman-services-fullstackapp-ba60a0c4d688.herokuapp.com/)
 
 Apple-gate Property Services LTD is your trusted solution for all household maintenance and handyman needs. We specialize in providing a wide range of services, including:
 
-Painting: Transform your space with professional-grade painting, price starting from £100 
-Assembling Various Units/Drawers: Get your furniture assembled effortlessly, with price starting from £50.
-Assistance in packing when moving in and out the house, price from £100.
+__Painting:__ Transform your space with professional-grade painting, price starting from £100. 
+__Assembling Various Units/Drawers:__ Get your furniture assembled effortlessly, with price starting from £40.
+__Assistance in packing__ when moving in and out the house, price from £50.
 Our user-friendly website ensures seamless booking of these services. The My Bookings feature allows customers to easily book, view, update, or cancel their appointments, ensuring a hassle-free experience. Customers can provide key information such as their name, email, phone number, preferred service, and additional booking details.
 
 With efficient functionality and a responsive design, the website operates smoothly, ensuring that no two bookings clash. From registration to booking confirmations, Applegate Property Services LTD offers a streamlined, easy-to-use platform for all your home service needs.
 
 
 
-![Mockup](documentation/supp-images/amiresponsive.png)
+![Mockup](static/images/all-devices-view.png)
 
 ## Index – Table of Contents
 * [User Experience (UX)](#user-experience-ux) 
@@ -71,7 +71,7 @@ With efficient functionality and a responsive design, the website operates smoot
 
 ## Features
 
-Applegate Property Services LTD is a full-fledged web application built using the Django framework, designed to offer a seamless user experience for customers looking to book handyman services. This project offers services such as painting, tiling, assembling furniture, and carpentry, with an efficient booking system that prevents scheduling conflicts. Users can create, read, update, and delete their bookings and manage their accounts.
+Applegate Property Services LTD is a full-fledged web application built using the Django framework, designed to offer a seamless user experience for customers looking to book handyman services. This project offers services such as painting,assembling furniture, and packing and moving, with an efficient booking system that prevents scheduling conflicts. Users can create, read, update, and delete their bookings and manage their accounts.
 
 ### Existing Features
 
