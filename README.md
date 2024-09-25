@@ -84,6 +84,7 @@ Designed with responsiveness in mind, the navigation bar adapts seamlessly to va
 ![Navbar view for an unregistered user](static/images/navbar-unregistereduser-view.png)
 ![Navbar view for a registered user](static/images/navbar-registereduser-desktop-view.png)
 ![Navbar responsive view on smaller devices](static/images/navbar-responsive-view.png)
+
 <hr>
 
 -__F02 Landing page, name & text__
@@ -95,9 +96,11 @@ At the top of the landing page (home page) there is an area that includes an AI 
 
 - __Booking Button__
 
-When an authenticated user is logged in, a *Book a Service* button will be displayed at the bottom of each service column that displays a feature service image, service description and service price information.
+When an authenticated user is logged in, a __Book a Service__ button will be displayed at the bottom of each service column that displays a feature service image, service description and service price information.
 
 ![Booking button for authenticated user feature](static/images/book-button.png)
+
+<hr>
 
 __F03 User Authentication (Register, Login, Logout)__
 
@@ -107,6 +110,7 @@ Login and logout pages were created to facilitate full and secure authentication
 
 - *__Register or Sign in to book a service:__* 
 ![Registration form](static/images/registration-form.png)
+
 ![Prompt for if user wants to book a service](static/images/sign-in-prompt-to-book.png)
 
 - *__Login/Logout__* 
@@ -115,23 +119,62 @@ Login and logout pages were created to facilitate full and secure authentication
 
 - *__Session Management:__*
 ![feedback messsage for when user signs in](static/images/user-sign-in-feedback.png)
+
 ![feedback for when user logs out](static/images/logout-feedback-message.png)
+
+<hr>
 
 __F04 Booking System__
 
+The booking form page has a corresponding service feature image and the description together with the associated price information.
+When a user wants to create a booking, they will have to provide their Name, Email, Contact Number, Service type, Date and time, Approved tickbox and any additional required customer information regarding the service they want assistance with.
+
+If a user books the same date and time that has already been booked into the system, a feedback message will be displayed to the user for them to choose a different time or date.
+
+A *Confirm Booking* submit button is displayed at the bottom of the booking form
+
 - *__Booking Form:__* 
-- *__Service Selection with Prices:__*
-- *__Date and Time Validation:__*   
-- *__Business Hours:__*
-- *__CRUD (Create, Read, Update, Delete) Functionality:__*
+![Booking Form](static/images/booking-form.png)
+   
+- *__Booking Conflict:__*
+![Booking conflict message](static/images/bookingConflict-message.png)
+
+- *__Customised Date and time picker__*
+![Customised date and time picker graphic](static/images/date-time-picker-graphic.png)
+
+<hr>
+
 
 __F05 My Bookings Page__ 
 
+My bookings page contains two main sub headings of __Your Upcoming Service Bookings__ and __Past Bookings__. These two panes will ammend dependant on the frequency of authenticated user bookings. Each upcoming service ticket will be displayed in the respective row from the aforementioned sub headings. Each service ticket that has already been attended to and carried out will be appended under the Past bookings row. 
+
+Each scheduled ticket will display key information such as __Service Title__, __Service Info__, __Service Price__, __Customer Additional Info__, and __Date and Time__ fields. A blue phone icon will be displayed together with customer contact number and a green confirm tickbox icon will appear next to a __Confirmed__ text to alert the user that the service has been confirmed if they have checked the __Approved tickbox__ in the booking form. Retrospectively, in the Booking Form, a user may forget to select the Approved tickbox which will result in the ticket displaying an orange question mark icon displaying __Awaiting Confirmation__
+
+The __Create, Read, Update and Delete__ functionality was implemented to ensure that if a user wants to cancel a ticket, a red __Cancel Booking__ nav button is shown at the top of the ticket. An __Edit Button__ was implemented incase a user wants to change the ticket information and once they confirm, the ticket information updates accordingly.
+
+
 - *__Booking Management:__* 
+![My Bookings Page Overview](static/images/my-bookings-page.png)
+
+![Customer ticket info and Confirmed booking feature](static/images/customer-ticket-confirmed.png)
+
+![Customer ticket info and Awaiting Confirmation booking feature](static/images/customer-ticket-awaiting-confirmation.png)
+
+- *__CRUD (Create, Read, Update, Delete) Functionality:__*
+![Cancel booking nav button](static/images/cancel-booking.png)
+
+![Edit or Delete ticket Button](static/images/edit-or-delete-buttons.png)
+
+![Edit Booking Page](static/images/edit-booking-page.png)
+
+<hr>
+
 
 __F06 Quotations Page (Services Overview)__
 
 - *__Service Carousel:__*
+
 - *__Coherent Service Prices:__* 
 
 __F07 Responsive Design with Bootstrap__
@@ -139,7 +182,6 @@ __F07 Responsive Design with Bootstrap__
 - *__Bootstrap Integration:__* 
 - *__Form Styling:__* 
 
-__F08 About Us Page__
 
 - *__Eye-Catching Theme:__* 
 - *__Content Focused on Trust:__* 
