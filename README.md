@@ -35,7 +35,7 @@ With efficient functionality and a responsive design, the website operates smoot
 
 * __US02__: As a **registered user,** I can **create a new booking,** so that **I can schedule a service based on my preferences.**
   - *Acceptance criteria 1:* A booking form allows users to select a service, provide details, and choose an available date and time.
-  - *Acceptance criteria 2:* Bookings are only allowed for open days and times (Mon-Sat, 9 AM - 9 PM).
+ 
 
 * __US03__: As a **registered user,** I can **update an existing booking,** so that **I can change the service details or reschedule it.**
   - *Acceptance criteria 1:* An “Edit” button next to each booking opens the booking form pre-filled with existing data.
@@ -106,7 +106,9 @@ __F03 User Authentication (Register, Login, Logout)__
 
 User authentication methods were implemented to ensure that if a user wants to book a service, they would either have to login if they are already registered or register first then make a booking request. The registration form also has an option for if user wants to view their password if they click on the __eye icon__.
 
-Login and logout pages were created to facilitate full and secure authentication. Each time a user logs in or out, a session message feedback displays below the navbar.
+Login and logout pages were created to facilitate full and secure authentication. Each time a user logs in or out, a session message feedback displays below the navbar. If a user trys to login with either an incorrect password or username, an on-screen feedback will be given for them to enter correct username or password. 
+
+A required feature was also implemented to ensure a user has provided both their username and password fields.
 
 - *__Register or Sign in to book a service:__* 
 ![Registration form](static/images/registration-form.png)
@@ -116,6 +118,10 @@ Login and logout pages were created to facilitate full and secure authentication
 - *__Login/Logout__* 
 ![login form](static/images/login-form.png)
 ![logout form](static/images/secure-logout-form.png)
+
+-*__On-screen alerts__*
+![User login authentication - on screen message for incorrect details](static/images/on-screen-message-user-details-incorrect.png)
+![Required information message](static/images/required-user-details-message.png)
 
 - *__Session Management:__*
 ![feedback messsage for when user signs in](static/images/user-sign-in-feedback.png)
@@ -170,7 +176,7 @@ The __Create, Read, Update and Delete__ functionality was implemented to ensure 
 
 <hr>
 
-__F06 PostgreSQL Database__
+__F06 PostgreSQL Database & Super User Creation__
 
 The admin interface provides a graphical user interface (GUI) for managing the data related to Service and Booking models. Administrators can easily create, read, update, and delete services and bookings without needing to interact directly with the database.
 Admins can add new services (like Painting, Assembling, Packing) with relevant details (price, description, featured image) and manage existing services.
@@ -193,12 +199,60 @@ The admin panel’s auto-generated forms make it simple to add, edit, or delete 
 
 __F07 Responsive Design with Bootstrap__
 
-- *__Bootstrap Integration:__* 
-- *__Form Styling:__* 
+Responsive design ensured that the website functions and looks good on all devices, from desktops to smartphones. By using Bootstrap, which provides a grid system and pre-built classes for styling, the website automatically adjusts based on the screen size. In the project base code, the below headings highlight a more indepth summary of responsive design with Bootstrap and why content focuses on trust also.
+
+*__Navbar__*: The navbar-toggler is implemented to collapse the menu on smaller screens, enhancing usability for mobile users.
+Container-fluid: This class helps make sure the content adapts to different screen widths.
+Bootstrap classes (col-md-8, offset-md-2) are used for layout, ensuring that elements are correctly spaced on different screen sizes.
+
+ - Form styling is critical for user experience and accessibility. In the code:
+
+ - Bootstrap form controls (form-control, form-group): These ensure that the forms are styled consistently and responsively, with inputs adapting to different devices.
+
+ - CSRF Token: Security is integrated using Django’s CSRF protection to keep the forms secure.
+
+ - Button Styling: Buttons like "Sign in" use Bootstrap's btn classes, making them clear and recognizable as actionable elements.
+
+ - Eye-Catching Theme
+An eye-catching theme engages users and sets the tone for the handyman property services brand.
+
+ - Google Fonts: Fonts like Josefin Sans, Kanit, and Raleway are loaded, creating a modern and professional appearance.
+
+ - Font Awesome icons (e.g., user icons, social media icons) are used to create visual interest, aiding both aesthetics and usability.
+
+ - Branding: The custom logo and favicon help maintain brand identity.
+
+ - Content Focused on Trust
+Building trust through content is vital for user engagement and retention. The website builds trust by:
+
+ - Clear Navigation: The navbar directs users to essential pages like "Sign in," "Register," and "My Bookings," ensuring transparency and ease of access.
+
+ - Personalized Experience: Displaying the logged-in user's name in the navbar ({{ user.username }}) reassures users they are securely signed in.
+
+ - Social Proof: Linking to social media pages like GitHub, LinkedIn, and Twitter shows users that the company is connected to trusted networks.
+
+ - Secure Practices: Use of security best practices, such as user authentication and form validation, adds credibility.
+
+ <br>
+
+__Bootstrap Integration:__
+![Bootstrap responsive design on smaller screens](static/images/bootstrap-responsive-design.png)
+
+__Social Proof with Hover Effect__
+![Social Media Nav Links with hover effect](static/images/social-nav-links.png)
 
 
-- *__Eye-Catching Theme:__* 
-- *__Content Focused on Trust:__* 
+__Eye-Catching Theme:__
+![Hover effect with theme color effect](static/images/styling-theme.png)
+
+<hr>
+
+
+-__How Existing Features Support User Stories__
+
+The User Stories in the [User Experience (UX)](#user-experience-ux) part of this document are numbered 1 to 10. The existing features are listed above as F01 to F07. Below is a traceability matrix cross-referencing the user stories with the features, illustrating which features support which stories :
+
+![User Story Feature Matrix](static/images/traceability-matrix-features-userstories.png)
 
 
 
@@ -207,11 +261,76 @@ __F07 Responsive Design with Bootstrap__
 
 ### Features which could be implemented in the future
 
+There are quite a number of features which could come in handy for future development and some of them are:
+
+__1. Enhanced Booking Management System__
+
+  - __Booking Reminders and Notifications:__ Add email or SMS notifications to remind users of upcoming service appointments or booking changes.
+
+  - __Service Availability Calendar:__ Implement a calendar view where users can see available dates and times for different services before they book, ensuring greater convenience in selecting their preferred times.
+
+  - __Recurring Bookings:__ Allow users to create recurring bookings for periodic services (e.g., weekly cleaning), making it easier to schedule regular appointments.
+
+__2. Service Reviews and Ratings__
+
+  - __User Ratings & Reviews:__ After completing a service, users can leave a rating and review for the service provider. This can help new users in choosing services based on feedback and improve the overall trust and credibility of the platform.
+
+  - __Review Management:__ Allow administrators to monitor, manage, or respond to reviews for service providers, ensuring that the feedback system is constructive and fair.
+
+__3. Loyalty and Referral Programs__
+
+  - __Loyalty Points System:__ Implement a rewards system where users earn points for booking services, leaving reviews, or referring new customers. Points can be redeemed for discounts on future services.
+
+  - __Referral Program:__ Add a referral feature that allows users to invite others to the platform and earn discounts or rewards when their referrals book a service.
+
+__4. Service Provider Profiles and Portfolio__
+
+  - __Service Provider Pages:__ Create dedicated pages for service providers, where users can view details about the provider, including their experience, reviews, and portfolio of past work.
+
+  - __Portfolio Display:__ Allow service providers to showcase their previous projects or services with images and descriptions, giving users more information when deciding which provider to choose.
+
+__5. Advanced Filtering and Sorting for Bookings__
+
+  - __Advanced Search and Filter Options:__ Users can filter services by price range, rating, availability, or type of service. This will help users quickly find the most relevant service.
+
+  - __Sort Booking History:__ Allow users to sort their past bookings by date, type of service, or status (confirmed, canceled, awaiting confirmation).
+
+__6. Multiple Payment Integration__
+
+  - __Payment Gateway Integration:__ Support multiple payment methods (credit card, PayPal, Apple Pay, etc.) to provide flexibility to users during the booking process.
+
+  - __Payment History:__ Create a section in user accounts where users can view and download receipts or payment history for completed services.
+
+__7. Discount Codes and Promotions__
+
+  - __Promo Codes:__ Introduce the ability for administrators to create promotional codes that users can apply during booking to receive discounts.
+
+  - __Seasonal Promotions:__ Run time-limited promotions (e.g., holiday sales) that offer discounted services for a certain period.
+
+__8. User Account Enhancements__
+
+  - __Profile Management:__ Allow users to update their account information such as profile picture, phone number, or preferred payment methods.
+
+  - __Multiple Addresses:__ Give users the ability to store multiple service addresses (e.g., home, office) for faster and more convenient booking.
+
+__9. Customer Support Integration__
+
+  - __Live Chat Support:__ Implement a real-time chat feature so that users can ask questions or get assistance directly from the platform without needing to call or email.
+
+  - __Help Desk and FAQs:__ Add a comprehensive help center with FAQs and articles to assist users with common questions or booking issues.
+
+__10. Mobile App Development__
+
+  - __Mobile Application:__ Develop a mobile app version of the platform for both iOS and Android to make booking services and managing bookings easier for users on the go.
+
+  - __Push Notifications:__ Send push notifications for reminders, booking confirmations, and special promotions to users who have the mobile app installed.
+
+<hr>
 
 
 ## Design
 
--   ### Wireframes
+### Wireframes
 
   -__Desktop-View - Home Page Unregistered user view__
 
@@ -304,7 +423,7 @@ __Desktop-View - Book a service Page__
 
 A GitHub Project with linked Issues was used as the Agile tool for this project.  User Stories with acceptance criteria were defined using GitHub Issues and development of code for these stories was managed using a Kanban board.  All of the User Stories were linked to a 'parent' Epic issue to show how they all supported the over-arching goal of the project.  The acceptance criteria were tested as each story moved to 'Done' and were also included in the final pre-submission manual testing documented in the Testing section of this README.
 
-The Epic, User Stories and Kanban board can be accessed here : [Handyman Services Agile Tool]()
+The Epic, User Stories and Kanban board can be accessed here : [Handyman Services Agile Tool](https://github.com/users/TerenceTamuka/projects/5)
 
 
 ## Technologies Used

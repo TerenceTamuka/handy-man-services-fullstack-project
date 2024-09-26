@@ -193,4 +193,15 @@ body {
     cursor: pointer;
     color: #888;
   }
+  .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+  }
   
+  .toggle-password:hover {
+    color: #333;
+  }
