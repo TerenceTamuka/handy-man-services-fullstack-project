@@ -58,4 +58,22 @@
   </div>
 </div>
 
+<!-- JavaScript to toggle password visibility -->
+<script>
+  document.querySelectorAll('.toggle-password').forEach(item => {
+    item.addEventListener('click', function() {
+      const target = document.getElementById(this.getAttribute('data-target'));
+      if (target.type === "password") {
+        target.type = "text";
+        this.classList.add('fa-eye-slash');
+        this.classList.remove('fa-eye');
+      } else {
+        target.type = "password";
+        this.classList.add('fa-eye');
+        this.classList.remove('fa-eye-slash');
+      }
+    });
+  });
+</script>
+
 {% endblock %}

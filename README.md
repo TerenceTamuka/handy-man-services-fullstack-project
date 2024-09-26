@@ -104,7 +104,7 @@ When an authenticated user is logged in, a __Book a Service__ button will be dis
 
 __F03 User Authentication (Register, Login, Logout)__
 
-User authentication methods were implemented to ensure that if a user wants to book a service, they would either have to login if they are already registered or register first then make a booking request.
+User authentication methods were implemented to ensure that if a user wants to book a service, they would either have to login if they are already registered or register first then make a booking request. The registration form also has an option for if user wants to view their password if they click on the __eye icon__.
 
 Login and logout pages were created to facilitate full and secure authentication. Each time a user logs in or out, a session message feedback displays below the navbar.
 
