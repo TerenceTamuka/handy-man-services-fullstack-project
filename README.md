@@ -131,7 +131,7 @@ When a user wants to create a booking, they will have to provide their Name, Ema
 
 If a user books the same date and time that has already been booked into the system, a feedback message will be displayed to the user for them to choose a different time or date.
 
-A *Confirm Booking* submit button is displayed at the bottom of the booking form
+A *Confirm Booking* submit button is displayed at the bottom of the booking form to trigger a service booking action.
 
 - *__Booking Form:__* 
 ![Booking Form](static/images/booking-form.png)
@@ -176,6 +176,9 @@ The admin interface provides a graphical user interface (GUI) for managing the d
 Admins can add new services (like Painting, Assembling, Packing) with relevant details (price, description, featured image) and manage existing services.
 Similarly, they can manage bookings, approve pending bookings, and modify or cancel them as needed.
 
+Non-technical users (such as business managers or customer service representatives) can use the Django admin interface to manage services and bookings without needing to understand the underlying code.
+The admin panel’s auto-generated forms make it simple to add, edit, or delete entries, significantly reducing the learning curve.
+
 - *__Database Intergration:__* 
 ![Django full site Administration Page](static/images/django-site-administration.png)
 
@@ -184,6 +187,9 @@ Similarly, they can manage bookings, approve pending bookings, and modify or can
 
 *__User feedback to confirm that a booking was successful__*
 ![Django admin successful booking confirmation feedback](static/images/django-admin-booking-success-feedback.png)
+
+*__Django Admin Page for manipulating bookings__*
+![Django admin Service bookings manipulation page](static/images/django-admin-manipulate-bookings.png)
 
 __F07 Responsive Design with Bootstrap__
 
