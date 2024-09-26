@@ -170,12 +170,20 @@ The __Create, Read, Update and Delete__ functionality was implemented to ensure 
 
 <hr>
 
+__F06 PostgreSQL Database__
 
-__F06 Quotations Page (Services Overview)__
+The admin interface provides a graphical user interface (GUI) for managing the data related to Service and Booking models. Administrators can easily create, read, update, and delete services and bookings without needing to interact directly with the database.
+Admins can add new services (like Painting, Assembling, Packing) with relevant details (price, description, featured image) and manage existing services.
+Similarly, they can manage bookings, approve pending bookings, and modify or cancel them as needed.
 
-- *__Service Carousel:__*
+- *__Database Intergration:__* 
+![Django full site Administration Page](static/images/django-site-administration.png)
 
-- *__Coherent Service Prices:__* 
+*__User Booking a service using Django admin page__*
+![Django admin page for customer booking a service](static/images/django-admin-booking-form.png)
+
+*__User feedback to confirm that a booking was successful__*
+![Django admin successful booking confirmation feedback](static/images/django-admin-booking-success-feedback.png)
 
 __F07 Responsive Design with Bootstrap__
 
@@ -186,9 +194,7 @@ __F07 Responsive Design with Bootstrap__
 - *__Eye-Catching Theme:__* 
 - *__Content Focused on Trust:__* 
 
-__F09 PostgreSQL Database__
 
-- *__Database Intergration:__* 
 
 
 
@@ -242,9 +248,50 @@ __Desktop-View - Book a service Page__
 
   
 
--   ### Entity-Relationship diagrams for DBMS
+-   ### Entity-Relationship diagrams and summarisation for DBMS
     
-      Notes on the ER diagrams :
+      __Entity-Relationships Schematic__
+      ![Graphic of the Entity-Relationships Diagram](static/images/ER-Diagram.png)
+
+      <hr>
+
+      __ER Diagram Breakdown__
+
+      __Entities:__
+
+      -__User:__ Represents the customer who makes the booking. This is a foreign key referencing Django's built-in User model.
+
+      -__Service:__ Represents different services like "Painting", "Assembling", and "Packing & Moving". Each service has attributes such as:
+      *__name__* (the type of service),
+      *__price__* (cost of the service),
+      *__description__* (details about the service), and the
+      *__featured_image__* (an optional image associated with the service).
+
+      -__Booking:__ Represents a customer's booking of a service. Key attributes include:
+      *__customer_name,__*
+      *__customer_email,__*
+      *__customer_phone_number,__*
+      *__date_time__* (when the booking is scheduled),
+      *__additional_info__* (optional additional booking details or specific requirements), and
+      *__approved__* (whether the booking is confirmed or not).
+
+      -__Relationships:__
+
+      __User to Booking:__ This is a one-to-many relationship. A user can have multiple bookings, but a booking is associated with one user.
+
+      __Service to Booking:__ This is a one-to-many relationship. A service can be booked multiple times, but a booking is associated with one service.
+
+      -__Unique Constraint:__
+
+      The Booking model has a unique constraint combining __date_time and service,__ meaning a particular service cannot be booked multiple times at the same date and time (to prevent double-booking).
+
+      -__Summary Methodology:__
+
+      __Service:__ Manages a list of services offered, each with a name, price, and optional image. The service choices are predefined in the system.
+
+      __Booking:__ Handles customer bookings for the services. The customer details, booking time, and additional info are stored in the booking. The approved field is used to track whether a booking is confirmed or pending approval.
+
+      __User:__ Utilizes Django’s built-in User model for customer authentication and identification, linked via a foreign key in the Booking model.
 
 
 ## Planning
