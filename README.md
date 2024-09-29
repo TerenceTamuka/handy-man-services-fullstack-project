@@ -381,6 +381,15 @@ __Desktop-View - Book a service Page__
 
   
 </details>
+<summary>iPad View Wireframes</summary>
+
+__Homepage view for registered, unregistered user & Edit Booking pages__
+![ipad view for registered, unregistered user and edit booking pages](static/image/ipad-view-homepages-editbooking-page.png)
+
+
+<details>
+
+</details>
 
 -   ### Entity-Relationship diagrams and summarisation for DBMS
     
