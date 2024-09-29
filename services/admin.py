@@ -3,7 +3,7 @@ from .models import Service, Booking
 from django_summernote.admin import SummernoteModelAdmin
 
 class ServiceAdmin(SummernoteModelAdmin):
-    summernote_fields = ('description',)  # Use Summernote for the 'description' field
+    summernote_fields = ('description','additional_info',)  # Use Summernote for the 'description' and customer additional fields
 
 class BookingAdmin(admin.ModelAdmin):
     list_display = ['customer_name', 'service', 'date_time', 'approved']  # Show approved status in the list view
