@@ -6,6 +6,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
 
+
 def index(request):
     services = Service.objects.all()
     context = {
@@ -103,4 +104,6 @@ def edit_booking(request, booking_id):
         form = BookingForm(instance=booking)  # Pre-fill the form with the current booking info
     
     return render(request, 'services/edit_booking.html', {'form': form, 'booking': booking})
+
+
 

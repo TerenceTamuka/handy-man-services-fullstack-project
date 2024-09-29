@@ -454,7 +454,7 @@ The Epic, User Stories and Kanban board can be accessed here : [Handyman Service
 -   [dj_database_url](https://pypi.org/project/dj-database-url/) library used to allow database urls to connect to the postgres db
 -   [psycopg2](https://pypi.org/project/psycopg2/) database adapter used to support the connection to the postgres db
 -   [Cloudinary](https://cloudinary.com/) used to store the images used by the application
--   [Summernote](https://pypi.org/project/django-summernote/) used to have rich text for users when creating their booking for a service in the ADDITIONAL TEXT filed.
+-   [Summernote](https://pypi.org/project/django-summernote/) used to have rich text for users when creating or editing their booking for a service in the ADDITIONAL TEXT filed.
 -   [Django allauth](https://django-allauth.readthedocs.io/en/latest/index.html) used for account registration and authentication
 -   [Django crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/) used to simplify form rendering
 -   [jquery library](https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js) used to fade out alert messages
