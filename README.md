@@ -337,6 +337,9 @@ __10. Mobile App Development__
 
 ### Wireframes
 
+<details>
+<summary>Desktop Wireframes</summary>
+
   -__Desktop-View - Home Page Unregistered user view__
 
 ![Desktop view of an unregistered user](static/images/desktop-view-homepage-unregistered-user-view.png)
@@ -377,6 +380,7 @@ __Desktop-View - Book a service Page__
 ![Desktop view of Book a service Page](static/images/desktop-view-bookaservice-page.png)
 
   
+</details>
 
 -   ### Entity-Relationship diagrams and summarisation for DBMS
     
@@ -518,6 +522,8 @@ Once code changes have been completed and tested on localhost, the application c
 
 
 ## Credits 
+
+Used this README https://github.com/elainebroche-dev/pf4-wayfarers-guided-hikes/blob/main/README.md as a base skeleton for my README.
 
 ### Code 
 - 
