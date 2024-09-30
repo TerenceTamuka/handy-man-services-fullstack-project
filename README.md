@@ -388,6 +388,9 @@ __Desktop-View - Book a service Page__
 __Homepage view for registered, unregistered user & Edit Booking pages__
 ![ipad view for registered, unregistered user and edit booking pages](static/images/ipad-view-homepages-editbooking-page.png)
 
+__My bookings, Registration Form & Booking form Pages__
+![ipad view for my bookings, registration form and booking form page](static/images/ipad-view-mybookings-registrationform-bookingform-page.png)
+
 </details>
 <hr>
 
@@ -455,7 +458,7 @@ The Epic, User Stories and Kanban board can be accessed here : [Handyman Service
 
 ### Frameworks, Libraries & Programs Used
 
--   [Google Fonts:](https://fonts.google.com/) used for the Lato font
+-   [Google Fonts:](https://fonts.google.com/) used for the Josefin Sans font
 -   [Font Awesome:](https://fontawesome.com/) was used to add icons for aesthetic and UX purposes.
 -   [Git:](https://git-scm.com/) was used for version control by utilising the Gitpod terminal to commit to Git and Push to GitHub.
 -   [GitHub:](https://github.com/) is used as the respository for the project code after being pushed from Git. In addition, for this project GitHub was used for the agile development aspect through the use of User Stories (GitHub Issues) and tracking them on a Kanban board.
@@ -532,7 +535,9 @@ Once code changes have been completed and tested on localhost, the application c
 
 ## Credits 
 
-Used this README https://github.com/elainebroche-dev/pf4-wayfarers-guided-hikes/blob/main/README.md as a base skeleton for my README.
+- Used this README https://github.com/elainebroche-dev/pf4-wayfarers-guided-hikes/blob/main/README.md as a base skeleton for my README.
+
+- [Chat GPT](https://chatgpt.com/) - AI tool used to generate the images used in the project website.
 
 ### Code 
 - 
