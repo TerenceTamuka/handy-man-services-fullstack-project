@@ -424,6 +424,7 @@ __Home page view for Unregisteered User and Registered User__
 
 </details>
 <hr>
+
 -   ### Entity-Relationship diagrams and summarisation for DBMS
     
       __Entity-Relationships Schematic__
