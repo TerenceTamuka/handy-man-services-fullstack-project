@@ -179,10 +179,22 @@ The __Create, Read, Update and Delete__ functionality was implemented to ensure 
 
 ![Edit or Delete ticket Button](static/images/edit-or-delete-buttons.png)
 
-![Edit Booking Page](static/images/edit-booking-page.png)
+__Super User - Booking Form with Approved Field View__
+![Super User Booking Form](static/images/superUser-BookAservice-view.png)
 
+__Super User - Edit Booking Form with Approved Field View__
+![Super User Edit Booking Form](static/images/superUser-EditBooking-view.png)
+
+__Non Super User - Booking Form View__
+![Non Super User Booking Form](static/images/nonSuperUser-BookAservice-view.png)
+
+__Non Super User - Edit Booking Form View__
+![Non Super User Edit Booking Form](static/images/nonSuperUser-EditBooking-view.png)
+
+__Booking On Screen Confirmation Message__
 ![Booking confirmation on screen message](static/images/booking-confirmation-message.png)
 
+__Booking Deletion Confirmation Message__
 ![Deletion confirmation on screen message](static/images/confirm-delete-message.png)
 
 <hr>
