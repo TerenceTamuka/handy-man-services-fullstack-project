@@ -410,6 +410,9 @@ __My bookings, Registration Form & Booking form Pages__
 __Sign Out, Non Super User Booking Form & Super User Booking Form View__
 ![ipad view for sign out, non super user booking form and super user booking form view](static/images/ipad-view-signOut-NonSuperUserBookAService-SuperUserBookAservice-view.png)
 
+__Sign In Page View__
+![Ipad view Sign in page](static/images/iPad-view-SignIn-page.png)
+
 </details>
 <hr>
 
