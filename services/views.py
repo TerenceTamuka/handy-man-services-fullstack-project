@@ -5,7 +5,9 @@ from .forms import BookingForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
-
+from django.views.generic import CreateView
+from django.urls import reverse_lazy
+from django.shortcuts import render
 
 def index(request):
     services = Service.objects.all()
@@ -105,5 +107,15 @@ def edit_booking(request, booking_id):
     
     return render(request, 'services/edit_booking.html', {'form': form, 'booking': booking})
 
+class BookingCreateView(CreateView):
+    model = Booking
+    form_class = BookingForm
+    template_name = 'booking_form.html'
+    success_url = reverse_lazy('booking_success')  # Redirect to success page after booking
+    
+    def get_form_kwargs(self):
+        kwargs = super(BookingCreateView, self).get_form_kwargs()
+        kwargs['user'] = self.request.user  # Pass the current user to the form
+        return kwargs
 
 
