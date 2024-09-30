@@ -407,6 +407,9 @@ __Homepage view for registered, unregistered user & Edit Booking pages__
 __My bookings, Registration Form & Booking form Pages__
 ![ipad view for my bookings, registration form and booking form page](static/images/ipad-view-mybookings-registrationform-bookingform-page.png)
 
+__Sign Out, Non Super User Booking Form & Super User Booking Form View__
+![ipad view for sign out, non super user booking form and super user booking form view](static/images/ipad-view-signOut-NonSuperUserBookAService-SuperUserBookAservice-view.png)
+
 </details>
 <hr>
 
