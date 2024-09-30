@@ -141,9 +141,7 @@ A *Confirm Booking* submit button is displayed at the bottom of the booking form
 
 Summernote was also implemented to allow authenticated users to use rich text when inputting their additional information regarding the booking.
 
-- *__Booking Form:__* 
-![Booking Form](static/images/booking-form.png)
-   
+
 - *__Booking Conflict:__*
 ![Booking conflict message](static/images/bookingConflict-message.png)
 
