@@ -421,6 +421,9 @@ __Sign In Page View__
 __Home page view for Unregisteered User and Registered User__
 ![Mobile view unregistered and registered user view](static/images/mobile-view-unregistered-registered-user-pages.png)
 
+__Booking Form view for Registered user and Super user view__
+![Mobile view registered user and super user booking form](static/images/mobile-view-registeredUser-SuperUser-bookingFormView.png)
+
 
 </details>
 <hr>
