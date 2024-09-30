@@ -162,7 +162,7 @@ My bookings page contains two main sub headings of __Your Upcoming Service Booki
 
 Each scheduled ticket will display key information such as __Service Title__, __Service Info__, __Service Price__, __Customer Additional Info__, and __Date and Time__ fields. A blue phone icon will be displayed together with customer contact number and a green confirm tickbox icon will appear next to a __Confirmed__ text to alert the user that the service has been confirmed if they have checked the __Approved tickbox__ in the booking form. Retrospectively, in the Booking Form, a user may forget to select the Approved tickbox which will result in the ticket displaying an orange question mark icon displaying __Awaiting Confirmation__
 
-The __Create, Read, Update and Delete__ functionality was implemented to ensure that if a user wants to cancel a ticket, a red __Cancel Booking__ nav button is shown at the top of the ticket. An __Edit Button__ was implemented incase a user wants to change the ticket information and once they confirm, the ticket information updates accordingly.
+The __Create, Read, Update and Delete__ functionality was implemented to ensure that if a user wants to cancel a ticket, a red __Cancel Booking__ nav button is shown at the top of the ticket. An __Edit Button__ was implemented incase a user wants to change the ticket information and once they confirm, the ticket information updates accordingly. Both the *Cancel Booking* and *Delete* buttons once they are clicked, a confirmation dialog is shown at the top modal window.
 
 
 - *__Booking Management:__* 
@@ -172,12 +172,18 @@ The __Create, Read, Update and Delete__ functionality was implemented to ensure 
 
 ![Customer ticket info and Awaiting Confirmation booking feature](static/images/customer-ticket-awaiting-confirmation.png)
 
+
+
 - *__CRUD (Create, Read, Update, Delete) Functionality:__*
 ![Cancel booking nav button](static/images/cancel-booking.png)
 
 ![Edit or Delete ticket Button](static/images/edit-or-delete-buttons.png)
 
 ![Edit Booking Page](static/images/edit-booking-page.png)
+
+![Booking confirmation on screen message](static/images/booking-confirmation-message.png)
+
+![Deletion confirmation on screen message](static/images/confirm-delete-message.png)
 
 <hr>
 
