@@ -414,8 +414,16 @@ __Sign In Page View__
 ![Ipad view Sign in page](static/images/iPad-view-SignIn-page.png)
 
 </details>
-<hr>
 
+<details>
+<summary>Mobile View Wireframes</summary>
+
+__Home page view for Unregisteered User and Registered User__
+![Mobile view unregistered and registered user view](static/images/mobile-view-unregistered-registered-user-pages.png)
+
+
+</details>
+<hr>
 -   ### Entity-Relationship diagrams and summarisation for DBMS
     
       __Entity-Relationships Schematic__
