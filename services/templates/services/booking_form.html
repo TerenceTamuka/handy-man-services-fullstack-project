@@ -23,21 +23,40 @@
         </div>
     </div>
 
+    
     <!-- Booking Form Section -->
-    <div class="row mt-5">
-        <div class="col-md-8 offset-md-2">
-            <h3>Book this service</h3>
-            <form method="POST">
-                {% csrf_token %}
-                {{ form.as_p }}
-                
-                <!-- Submit Button -->
-                <div class="form-group text-center">
-                    <button type="submit" class="btn btn-primary">Confirm Booking</button>
+<div class="row mt-5">
+    <div class="col-md-8 offset-md-2">
+        <h3>Book this service</h3>
+        <form method="POST">
+            {% csrf_token %}
+            
+            <!-- Loop through all the form fields except 'approved' -->
+            {% for field in form %}
+                {% if field.name != 'approved' %}
+                    <div class="form-group">
+                        {{ field.label_tag }}  <!-- Display field label -->
+                        {{ field }}  <!-- Render the field input -->
+                        <div class="text-danger">{{ field.errors }}</div> <!-- Show validation errors if any -->
+                    </div>
+                {% endif %}
+            {% endfor %}
+            
+            <!-- Only show 'approved' field if the user is a superuser -->
+            {% if request.user.is_superuser %}
+                <div class="form-group">
+                    {{ form.approved.label_tag }}  <!-- Display approved label -->
+                    {{ form.approved }}  <!-- Render the approved checkbox -->
                 </div>
-            </form>
-        </div>
+            {% endif %}
+            
+            <!-- Submit Button -->
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary">Confirm Booking</button>
+            </div>
+        </form>
     </div>
+</div>
 </div>
 
 {% endblock %}
