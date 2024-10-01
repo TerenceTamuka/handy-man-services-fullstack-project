@@ -1,3 +1,6 @@
+/* -------------------------------------------------
+   Global Styles
+--------------------------------------------------- */
 body {
     background-color: #3C5F43;
     max-width: 125rem;
@@ -5,69 +8,53 @@ body {
     font-family: "Josefin Sans", sans-serif;
     color: #fff;
 }
+
+/* -------------------------------------------------
+   Navbar and Branding
+--------------------------------------------------- */
 .brand {
-    /* font-family: "Josefin Sans", sans-serif; */
     font-size: 1.4rem;
     font-weight: 700;
     color: #062c19;
-    transition: ease .40s;
+    transition: ease 0.40s;
 }
 
-
-.navbar-brand .brand:hover{
+.navbar-brand .brand:hover {
     background: #4A7A56;
     color: #041d17;
-    box-shadow: 8px 8px  rgb(90 185 185 / 40%);
+    box-shadow: 8px 8px rgb(90 185 185 / 40%);
     border-radius: 70px;
     transform: scale(1.2);
 }
 
-.booking-summary{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: rgba(4, 95, 39, 0.811);
-}
-
+/* -------------------------------------------------
+   Jumbotron Styling
+--------------------------------------------------- */
 .jumbotron {
     background-image: url("https://res.cloudinary.com/dtqyltolm/image/upload/v1727095474/heroImage_x2y8vk.png");
     background-size: cover;
     padding-top: 10%;
     padding-bottom: 25%;
     max-height: 100%;
-    color: white; 
+    color: white;
     z-index: 1;
-    
-    
-}
-.fa-phone{
-    font-size: 2rem;
-    color: #0000dc;
-    margin-bottom: 1rem;
-}
-.fa-check-circle{
-    font-size: 2rem;
-    color: #00cc00;
-    margin-bottom: 1rem;
-}
-.fa-question-circle{
-    font-size: 2rem;
-    color: #ff851b;
-    margin-bottom: 1rem;
 }
 
-
-.welcome-text {
+/* -------------------------------------------------
+   Typography & Text Colors
+--------------------------------------------------- */
+.text-white {
     color: #fff;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-align: center;
-    padding: 1rem 0.5rem;
-    background-color: rgba(4, 95, 39, 0.811);
-    margin: 0 10%;
-    
 }
+
+.text-black {
+    color: black;
+}
+
+/* -------------------------------------------------
+   Welcome and Booking Message Styling
+--------------------------------------------------- */
+.welcome-text,
 .bookings-update-message {
     color: #fff;
     font-size: 1.5rem;
@@ -76,16 +63,11 @@ body {
     padding: 1rem 0.5rem;
     background-color: rgba(4, 95, 39, 0.811);
     margin: 0 10%;
-    
-}
-.text-white{
-    color: #fff;
 }
 
-.text-black {
-    color: black;
-}
-
+/* -------------------------------------------------
+   Card Styling (Titles, Text, Prices)
+--------------------------------------------------- */
 .card-title {
     font-size: 1.5rem;
     font-weight: 700;
@@ -98,6 +80,7 @@ body {
     font-size: 1.5rem;
     line-height: 1.5;
 }
+
 .card-price {
     font-size: 1.5rem;
     font-weight: 700;
@@ -105,44 +88,10 @@ body {
     color: #3C5F43;
 }
 
-.btn-signup {
-    background-color: #3C5F43;
-    color: #fff;
-    border: 2px solid #2E4A35; /* Add a border */
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; /* Smooth transition effect */
-}
-
-.btn-signup:hover {
-    background-color: #4A7A56; /* Change background color on hover */
-    border-color: #4A7A56; /* Change border color on hover */
-    color: #fff; /* Ensure text color stays white */
-}
-
-.btn-block {
-    background-color: #3C5F43;
-    color: #fff;
-    border: 2px solid #2E4A35; /* Add a border */
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; 
-}
-
-.btn-block:hover{
-    background-color: #4A7A56; /* Change background color on hover */
-    border-color: #4A7A56; /* Change border color on hover */
-    color: #fff; /* Ensure text color stays white */
-}
-
-
-.footer-bg {
-    color: #fff;
-}
-
-.fab {
+/* -------------------------------------------------
+   Button Styling
+--------------------------------------------------- */
+.btn-signup, .btn-block, .fab {
     background-color: #3C5F43;
     color: #fff;
     border: 2px solid #2E4A35; /* Add a border */
@@ -152,13 +101,54 @@ body {
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
-.fab:hover{
+.btn-signup:hover, .btn-block:hover, .fab:hover {
     background-color: #4A7A56; /* Change background color on hover */
     border-color: #4A7A56; /* Change border color on hover */
     color: #fff; /* Ensure text color stays white */
 }
 
-/* Change color of customer phone number */
+/* Custom Blue Button Styling */
+.btn-custom-blue {
+    background-color: #007bff; /* Blue background color */
+    color: white;              /* White text color */
+    border: 1px solid #007bff; /* Matching border color */
+    padding: 5px 5px;          /* Add padding for a better appearance */
+    border-radius: 3px;        /* Slight rounding of corners */
+    font-size: 16px;           /* Font size for better readability */
+    text-transform: uppercase; /* Optional: Make text uppercase */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.btn-custom-blue:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3;     /* Matching border on hover */
+    color: white;              /* Ensure text stays white */
+}
+
+.btn-custom-blue:focus {
+    outline: none;             /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle shadow on focus */
+}
+
+/* -------------------------------------------------
+   Footer Styling
+--------------------------------------------------- */
+.footer-bg {
+    color: #fff;
+}
+
+/* -------------------------------------------------
+   Booking Summary and Icons
+--------------------------------------------------- */
+.booking-summary {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(4, 95, 39, 0.811);
+}
+
+/* Booking Icons */
 .booking-icons .fas.fa-phone {
     color: #0805ad; /* Blue color for phone icon */
 }
@@ -167,7 +157,6 @@ body {
     color: #0805ad; /* Blue color for the phone number text */
 }
 
-/* Change color of "Confirmed" text */
 .booking-icons .fas.fa-check-circle {
     color: #0bff44; /* Green color for the check icon */
 }
@@ -176,7 +165,6 @@ body {
     color: #0bff44; /* Green color for "Confirmed" text */
 }
 
-/* Change color of "Awaiting Confirmation" text */
 .booking-icons .fas.fa-question-circle {
     color: #ffc107; /* Yellow color for the question icon */
 }
@@ -185,6 +173,9 @@ body {
     color: #ffc107; /* Yellow color for "Awaiting Confirmation" text */
 }
 
+/* -------------------------------------------------
+   Toggle Password Field Styling
+--------------------------------------------------- */
 .toggle-password {
     position: absolute;
     top: 50%;
@@ -192,5 +183,8 @@ body {
     transform: translateY(-50%);
     cursor: pointer;
     color: #888;
-  }
-  
+}
+
+.toggle-password:hover {
+    color: #333;
+}
