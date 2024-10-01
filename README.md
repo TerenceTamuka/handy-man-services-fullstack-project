@@ -429,6 +429,10 @@ __My Bookings Page - Before and After Approval__
 
 __Edit Booking Page for Registered and Super User Views__
 ![Mobile view for Edit booking page- Registered user & Super User Views](static/images/mobile-view-editBookingPage-Registered-SuperUserView.png)
+
+__Registration Form, Sign In & Sign Out Pages__
+![Mobile view for Registration Form, Sign In and Sign Out Pages](static/images/mobile-view-Registration-SignIn-SignOut-pages.png)
+
 </details>
 <hr>
 
