@@ -517,7 +517,7 @@ The Epic, User Stories and Kanban board can be accessed here : [Handyman Service
 -   [Django crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/) used to simplify form rendering
 -   [jquery library](https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js) used to fade out alert messages
 -   [Django testing tools](https://docs.djangoproject.com/en/3.2/topics/testing/tools/) used for python mvt testing
--   [Jest](https://jestjs.io/) - used to test jquery in script.js
+-   [Jest](https://jestjs.io/) - used to test jquery in script.js functions
 -   [coverage](https://coverage.readthedocs.io/en/coverage-5.5/) used to check how much of the python code has been covered by 
 automated tests
 
