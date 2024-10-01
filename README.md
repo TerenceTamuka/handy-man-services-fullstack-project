@@ -421,10 +421,14 @@ __Sign In Page View__
 __Home page view for Unregisteered User and Registered User__
 ![Mobile view unregistered and registered user view](static/images/mobile-view-unregistered-registered-user-pages.png)
 
-__Booking Form view for Registered user and Super user view__
+__Booking Form view for Registered user and Super user Approved view__
 ![Mobile view registered user and super user booking form](static/images/mobile-view-registeredUser-SuperUser-bookingFormView.png)
 
+__My Bookings Page - Before and After Approval__
+![Mobile view on My Bookings Page - Awaiting Confirmation and Confirmed Tickets](static/images/mobile-view-myBookings-Awaiting-Confirmed.png)
 
+__Edit Booking Page for Registered and Super User Views__
+![Mobile view for Edit booking page- Registered user & Super User Views](static/images/mobile-view-editBookingPage-Registered-SuperUserView.png)
 </details>
 <hr>
 
