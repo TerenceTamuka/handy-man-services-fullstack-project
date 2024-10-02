@@ -527,9 +527,36 @@ automated tests
 
 - [HTML Validator](https://validator.w3.org/)
 
-    - Since this project utilises Django templates, the html has been validated by manually executing through the application pages, copying the source of the rendered pages and then validating this version of the html using the W3C Validator (link shown above).  HTML  for the Django admin site pages was not edited so has not been validated here.  The Signup, Login and Logout pages from Django allauth were remodelled and so have been validated, with results below.
+    - Since this project utilises Django templates, the html has been validated by manually executing through the application pages, copying the source of the rendered pages and then validating this version of the html using the W3C Validator (link shown above).  HTML  for the Django admin site pages was not edited so has not been validated here.  The Signup/registration form, Login and Logout pages from Django allauth were remodelled and so have been validated, with results below.
 
-    - Validation results for index.html
+<details>
+<summary>Validation result for index.html</summary>
+
+![index.html validation result](static/testing-images/indexPage-validation.png)
+
+</details>
+
+<details>
+<summary>Validation result for Registration Form Page</summary>
+
+![signup.html validation result](static/testing-images/registrationPage-validation-result.png)
+
+</details>
+
+<details>
+<summary>Validation resign for Sign In Page</summary>
+
+![signin.html validation result](static/testing-images/signInPage-validation-result.png)
+
+</details>
+
+<details>
+<summary>Validation result foor Booking Page</summary>
+
+![booking.html validation result](static/testing-images/BookingPage_validation-result.png)
+
+</details>
+
 
 ### Automated Testing
 

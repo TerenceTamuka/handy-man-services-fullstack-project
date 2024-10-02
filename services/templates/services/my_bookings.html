@@ -55,21 +55,25 @@
                             </form>
                         </div>
                     </div>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        {{ booking.service.name }} on {{ booking.date_time|date:"F j, Y, g:i a" }}
                     
-                        <!-- Buttons for CRUD operations -->
-                        <div>
-                            <!-- Edit Booking Button -->
-                            <a href="{% url 'edit_booking' booking.id %}" class="btn btn-sm btn-outline-info">Edit</a>
-                            <!-- Delete Booking Button -->
-                            <form action="{% url 'delete_booking' booking.id %}" method="POST" style="display:inline;">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-sm btn-outline-danger" 
-                                        onclick="return confirm('Are you sure you want to delete this booking?');">Delete</button>
-                            </form>
-                        </div>
-                    </li>
+                    <!-- Wrap the li in a ul to resolve the validation error -->
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            {{ booking.service.name }} on {{ booking.date_time|date:"F j, Y, g:i a" }}
+                        
+                            <!-- Buttons for CRUD operations -->
+                            <div>
+                                <!-- Edit Booking Button -->
+                                <a href="{% url 'edit_booking' booking.id %}" class="btn btn-sm btn-outline-info">Edit</a>
+                                <!-- Delete Booking Button -->
+                                <form action="{% url 'delete_booking' booking.id %}" method="POST" style="display:inline;">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-sm btn-outline-danger" 
+                                            onclick="return confirm('Are you sure you want to delete this booking?');">Delete</button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
                 {% empty %}
                 <p class="bookings-update-message">You currently have no upcoming bookings.</p>
