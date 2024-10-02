@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Apple-gate Property Services LTD</title>
-    <link rel="shortcut icon" href="{% static 'favicon/logo.png' %}" />
+    <link rel="shortcut icon" href="{% static 'favicon/logo.png' %}">
 
      <!--Meta description for the project-->
      <meta name="description" content="This is a handy man services web application to help customers book for appointments and get their house needs catered for.">
@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Kanit:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -33,52 +33,54 @@
 </head>
 <body class="d-flex flex-column h-100 main-bg {% block body_class %}full-background{% endblock %}" style="max-width: 2000px;">
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class = "container-fluid">
+        <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'index' %}">
                 <i class="fa fa-paint-brush fa-rotate-270"></i><span class="brand"> apple-gate property services</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
+                <!-- Main Navigation Links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a {% if '/' == request.path %} class="nav-link active" {% else %}class="nav-link" {% endif %}
+                        <a {% if '/' == request.path %} class="nav-link active" {% else %} class="nav-link" {% endif %}
                             aria-current="page" href="{% url 'index' %}">Home</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a {% if 'book' in request.path %}class="nav-link active" {% else %}class="nav-link" {% endif %}
+                        <a {% if 'book' in request.path %} class="nav-link active" {% else %} class="nav-link" {% endif %}
                             href="{% url 'my_bookings' %}">My Bookings</a>
                     </li>
                     <li class="nav-item">
-                        <a {% if 'logout' in request.path %}class="nav-link active" {% else %}class="nav-link"
-                            {% endif %} href="{% url 'account_logout' %}">Sign out</a>
+                        <a {% if 'logout' in request.path %} class="nav-link active" {% else %} class="nav-link" {% endif %}
+                            href="{% url 'account_logout' %}">Sign out</a>
                     </li>
                     {% if user.username == "admin" %}
                     <li class="nav-item">
-                        <a {% if 'admin' in request.path %}class="nav-link active" {% else %}class="nav-link"
-                            {% endif %} href="{% url 'admin:index' %}">Admin</a>
+                        <a {% if 'admin' in request.path %} class="nav-link active" {% else %} class="nav-link" {% endif %}
+                            href="{% url 'admin:index' %}">Admin</a>
                     </li>
                     {% endif %}
-                        {% else %}
-                        <li class="nav-item">
-                            <a {% if 'signup' in request.path %}class="nav-link active" {% else %}class="nav-link"
-                                {% endif %} href="{% url 'account_signup' %}">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a {% if 'login' in request.path %}class="nav-link active" {% else %}class="nav-link"
-                                {% endif %} href="{% url 'account_login' %}">Sign in</a>
-                        </li>
-                        {% endif %}
-                    </ul>
-                    {% if user.is_authenticated %}
-                    <span class="navbar-text">
-                        <i class="far fa-user"></i> {{ user.username }}
-                    </span>
+                    {% else %}
+                    <li class="nav-item">
+                        <a {% if 'signup' in request.path %} class="nav-link active" {% else %} class="nav-link" {% endif %}
+                            href="{% url 'account_signup' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a {% if 'login' in request.path %} class="nav-link active" {% else %} class="nav-link" {% endif %}
+                            href="{% url 'account_login' %}">Sign in</a>
+                    </li>
                     {% endif %}
                 </ul>
+                
+                <!-- User Profile/Status Info -->
+                {% if user.is_authenticated %}
+                <span class="navbar-text">
+                    <i class="far fa-user"></i> {{ user.username }}
+                </span>
+                {% endif %}
             </div>
         </div>
     </nav>
