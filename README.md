@@ -525,7 +525,11 @@ automated tests
 
 ### Validator Testing 
 
-- 
+- [HTML Validator](https://validator.w3.org/)
+
+    - Since this project utilises Django templates, the html has been validated by manually executing through the application pages, copying the source of the rendered pages and then validating this version of the html using the W3C Validator (link shown above).  HTML  for the Django admin site pages was not edited so has not been validated here.  The Signup, Login and Logout pages from Django allauth were remodelled and so have been validated, with results below.
+
+    - Validation results for index.html
 
 ### Automated Testing
 

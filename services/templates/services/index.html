@@ -1,3 +1,5 @@
+
+
 {% extends 'base.html' %}
 {% block body_class %}{}{% endblock %}
 {% load static %}
@@ -8,7 +10,7 @@
     <div class="jumbotron jumbotron-img text-center" style="background-image: url('https://res.cloudinary.com/dtqyltolm/image/upload/v1727095474/heroImage_x2y8vk.png'); background-size: cover; height: 60vh; display: flex; align-items: center; justify-content: center; color: white;">
         <div class="welcome-text">
             <h1>Welcome to Apple-gate Property Services LTD</h1>
-            <h4>Don't hesitate to book a service for your household handyman needs</h4>
+            <h2>Don't hesitate to book a service for your household handyman needs</h2>
             <p class="quote-text">Where your home meets quality and care</p>
         </div>
     </div>
@@ -29,9 +31,9 @@
 
                 <!-- Service Information -->
                 <div class="card-body text-center">
-                    <h5 class="card-title" style="cursor: pointer;">{{ service.name }}</h5>
+                    <h3 class="card-title" style="cursor: pointer;">{{ service.name }}</h3>
                     <p class="card-text">{{ service.description }}</p>
-                    <h6 class="card-price">Price from £{{ service.price }}</h6>
+                    <h4 class="card-price">Price from £{{ service.price }}</h4>
 
                     <!-- Book a Service Button for Authenticated Users -->
                     {% if user.is_authenticated %}
@@ -46,3 +48,4 @@
     </div>
 </div>
 {% endblock %}
+
