@@ -551,11 +551,17 @@ automated tests
 </details>
 
 <details>
-<summary>Validation result foor Booking Page</summary>
+<summary>Validation result for Booking Page</summary>
 
 ![booking.html validation result](static/testing-images/BookingPage_validation-result.png)
 
 </details>
+
+<details>
+<summary>Validation result for My Bookings Page</summary>
+
+![myBookings.html validation result](static/testing-images/myBookingsPage-validation-result.png)
+
 
 
 ### Automated Testing
