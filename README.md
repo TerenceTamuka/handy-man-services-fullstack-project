@@ -680,9 +680,41 @@ All tested user stories and acceptance criteria passed successfully. The website
 
 ## Deployment
 
+Outlined below are the steps to clone this project repository, along with the necessary configurations and deployment procedures. A summary of similar steps can be found in the CI Cheat Sheet provided by Code Institute.
 
+__Cloning the Repository:__ Instructions for cloning this project repository.
+
+__Setting Up the Application and PostgreSQL Database on Heroku:__ Guidance on creating the application and configuring the PostgreSQL database on Heroku.
+
+__Configuring Cloudinary:__ Steps to configure Cloudinary for hosting images used within the application.
+
+__Linking the Heroku Application to the GitHub Repository:__ Instructions on connecting the Heroku app to the GitHub repository for streamlined deployments.
+
+__Running Automated Tests:__ Procedure for executing automated tests to ensure application functionality.
+
+__Final Deployment Process:__ A walkthrough of the final steps required for successful application deployment.
 
 ### How to Clone the Repository 
+
+Follow the steps below to clone this repository and set up the application locally:
+
+  - Navigate to the GitHub repository. https://github.com/TerenceTamuka/handy-man-services-fullstack-project
+  - Click on the "Code" button, select HTTPS, and copy the URL provided.
+  - Open your GitBash terminal and move to the directory where you want the cloned project to be stored.
+  - In the terminal, run the following command:
+  - git clone <https://github.com/TerenceTamuka/handy-man-services-fullstack-project> 
+  - Press Enter to initiate the cloning process.
+  - To install the necessary dependencies for the application, use the command:
+  - pip install -r requirements.txt
+  - While developing or running the app locally, ensure that DEBUG=True is set in the settings.py file.
+  - To push any changes made to the cloned repository back to GitHub, follow these steps:
+  - Add the files you modified:
+  - git add <"filename">  or use git add .  to add all changed files.
+  - Commit the changes with a message describing them:
+  - git commit -m "description of changes"
+  - Push the changes to the repository:
+  - git push
+  - Note: Any updates pushed to the master branch will be reflected on the live application once it's redeployed from Heroku.
 
 
 ### Create Application and Postgres DB on Heroku
@@ -734,10 +766,11 @@ Once code changes have been completed and tested on localhost, the application c
 - Ensure this line exists in settings.py to make summernote work on the deployed environment (CORS security feature): X_FRAME_OPTIONS = 'SAMEORIGIN'
 - Ensure requirements.txt is up to date using the command : pip3 freeze --local > requirements.txt
 - Push files to GitHub
-- In the Heroku Config Vars for the application delete this environment variable :  DISABLE_COLLECTSTATIC
+- Ensured to run the python3 manage.py COLLECTSTATIC before final deployment to ensure all the latest static files are collected since the DISABLE STATIC function variable was deleted on heroku.
 - On the Heroku dashboard go to the Deploy tab for the application and click on deploy branch
+- The Code Institute's "Django Blog Cheat Sheet" was a key resource used throughout the process of installing and configuring frameworks and libraries, setting up the database management system (DBMS), and preparing the application for deployment. : [CI Cheat Sheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf)
 
-#### The live link to the application can be found here - []() 
+#### The live link to the application can be found here - [Applet-gate Property Services LTD](https://handyman-services-fullstackapp-ba60a0c4d688.herokuapp.com/) 
 
 
 ## Credits 
@@ -746,6 +779,12 @@ Once code changes have been completed and tested on localhost, the application c
 
 - [Chat GPT](https://chatgpt.com/) - AI tool used to generate the images used in the project website.
 
+- [Telusko](https://www.youtube.com/watch?v=SIyxjRJ8VNY) - wacthed some django tutorials on this channel to help with my ideation developemnt.
+
+- [Programming with Mosh](https://www.youtube.com/watch?v=rHux0gMZ3Eg) - Wacthed this tutorial to help me understand key concepts of templates, forms and models used in this project.
+
+
+
 ### Code 
 - 
 
@@ -753,9 +792,11 @@ Once code changes have been completed and tested on localhost, the application c
 
 ### Media 
 - The Josefin Sans font used was imported from [Google Fonts](https://fonts.google.com/)
+- Fontawesome was used for icons, including icons for user Icon when signed in and footer section social media links on GitHub, LinkedIn & twittwer- [Font Awesome](https://fontawesome.com/v4/icons/)
+- The applicaiton favicon logo was created on: [Favicon](https://favicon.io/logo-generator/) 
 
   
   
 ### Acknowledgments
 
-- 
+- My uncle by the name of Trevor is the one who had the handyman services brand idea since he is the one who in the future will be carrying out the project services.
