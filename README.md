@@ -553,7 +553,8 @@ automated tests
 <details>
 <summary>Validation result for Booking Page</summary>
 
-![booking.html validation result](static/testing-images/BookingPage_validation-result.png)
+There were a few Summernote issues encountered during the validatotion process which didnt resulted in the code not fully validated.
+![booking.html validation result](static/testing-images/bookingFormValidationReport.png)
 
 </details>
 
@@ -562,6 +563,63 @@ automated tests
 
 ![myBookings.html validation result](static/testing-images/myBookingsPage-validation-result.png)
 
+</details>
+
+<details>
+<summary>Validation result for Edit Booking Page</summary>
+
+Similar to the booking page, the validation for this page also encapsulated the Summernote feature which cased issues while validating but besides the summernote feature, the code still passes.
+
+![EditBooking.html validation result](static/testing-images/EditBooking-Validation-result.png)
+
+</details>
+
+<details>
+<summary>Validation result for Sign out Page</summary>
+
+![signout.html page validation result](static/testing-images/signOut-Validation-result.png)
+
+</details>
+
+<hr>
+
+- [CSS Validator](https://validator.w3.org/nu/#textarea)
+
+<details>
+<summary>Validation result for the Project CSS</summary>
+
+![CSS styling validation report](static/testing-images/CSS-Validation-Result.png)
+</details>
+
+  - __1. Global Styles Body:__ Sets the background color to a dark green shade (#3C5F43) and applies a maximum width of 125rem. It ensures consistency in typography using the "Josefin Sans" font family and sets the global text color to white (#fff).
+
+  - __2. Navbar and Branding Brand:__ The brand name in the navbar has a prominent font size (1.4rem) with bold text. Hover effects on the brand include changing the background and text color with a smooth transition, adding a shadow, and a slight scaling animation to make it interactive and visually engaging.
+
+  - __3. Jumbotron Styling Jumbotron:__ This section uses a hero image background with a responsive design, filling the entire area with a cover effect. The jumbotron has padding and a z-index setting to ensure its content stays on top and visually distinct.
+
+  - __4. Typography & Text Colors Text Colors:__ Utility classes for text colors are defined to quickly apply white or black text to elements where needed.
+
+  - __5. Welcome and Booking Message Styling Welcome/Booking Message:__ These sections are styled to stand out with larger font sizes (1.5rem), bold text, and centered alignment. The background color is semi-transparent (rgba(4, 95, 39, 0.811)), giving it an overlay effect while still blending with the background.
+
+  - __6. Card Styling (Titles, Text, Prices) Card Titles, Text, and Prices:__ This defines consistent styles for card elements with a strong emphasis on typography. Titles, text, and prices all have a 1.5rem font size, with titles and prices having bold text and a specific color (#3C5F43), keeping them visually connected.
+
+  - __7. Button Styling General Buttons:__ Buttons like .btn-signup, .btn-block, and .fab are styled with a background color of dark green (#3C5F43) and white text. They feature transitions for hover effects that change the background and border colors, enhancing user interactivity.
+
+  - __8. Footer Styling:__ The .footer-bg is a minimal class that ensures text within the footer section is styled in white, matching the overall light-on-dark theme of the application.
+
+  - __9. Booking Summary and Icons:__ *Summary:* The .booking-summary section is designed to present key booking details, with a semi-transparent green background that aligns with the primary color scheme.
+*Icons:* The .booking-icons classes colorize various icons, like phone icons (#0805ad) and confirmation indicators (#0bff44 for confirmed bookings, #ffc107 for awaiting confirmation), making them intuitive and visually distinct.
+
+  - __10. Toggle Password Field:__ The .toggle-password class adds functionality to password fields, allowing users to reveal or hide their passwords. The icon is positioned within the input field and changes color on hover to indicate interactivity.
+
+
+__Overall Design Goals__ The CSS design prioritizes:
+
+  - Consistency: A cohesive green and white color palette is used throughout.
+  - User Experience: Buttons and interactive elements include hover effects and smooth transitions to improve engagement.
+  - Readability: Typography and spacing are optimized for readability, ensuring that key information like prices and messages stand out.
+  - Responsiveness: The layout and elements are designed to be responsive, ensuring they adapt well to different screen sizes.
+  - This styling enhances the professionalism and user-friendliness of the web application, creating a modern and consistent user interface.
 
 
 ### Automated Testing
@@ -578,7 +636,26 @@ automated tests
     
 ### Manual Testing Test Cases and Results
 
-- 
+
+| **User Story (US)** | **Test Case** | **Acceptance Criteria** | **Expected Outcome** | **Actual Outcome** | **Pass/Fail** |
+| ------ | ------ | ------ | ------ | ------ | ------ |
+| **US01** : As a registered user, I can view all my past and upcoming bookings, so that I can keep track of my service requests. | Verify that past and upcoming bookings are displayed on the user’s dashboard. | 1. Bookings are displayed in a list or table format. 2. The list shows the service name, date, time, and additional info. | Past and upcoming bookings should be listed in a table, displaying details like service name, date, and time. | The booking list is displayed correctly, with all the required information visible. | Pass |
+| **US02** : As a registered user, I can create a new booking, so that I can schedule a service based on my preferences. | Verify that the user can create a new booking using a form. | 1. A booking form allows users to select a service, provide details, and choose an available date and time. | A new booking form should allow users to select a service, enter details, and schedule a date and time. | The booking form works correctly, and bookings are created successfully. | Pass |
+| **US03** : As a registered user, I can update an existing booking, so that I can change the service details or reschedule it. | Verify that the user can edit a booking by updating details. | 1. An "Edit" button next to each booking opens the booking form pre-filled with existing data. 2. Validation ensures the new date and time do not conflict with other bookings. | The user should be able to edit a booking, with pre-filled details and conflict checking. | Editing is functional, pre-filled data is accurate, and validation prevents conflicts. | Pass |
+| **US04** : As a registered user, I can delete a booking, so that I can remove a scheduled service that I no longer need. | Verify that a user can delete a booking and that it is removed from the database. | 1. A "Delete" button is available for each booking, with a confirmation prompt. 2. The booking is permanently removed from the database after deletion. | The user should see a delete button, a confirmation prompt, and the booking should be removed. | The delete button works as expected, with confirmation and permanent removal from the database. | Pass |
+| **US05** : As a registered user, I can filter my bookings, so that I can easily find upcoming or past bookings.
+
+
+
+
+
+
+
+
+
+
+
+
 ### Known bugs
 
 - Currently no known bugs.
