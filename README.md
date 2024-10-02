@@ -643,7 +643,25 @@ __Overall Design Goals__ The CSS design prioritizes:
 | **US02** : As a registered user, I can create a new booking, so that I can schedule a service based on my preferences. | Verify that the user can create a new booking using a form. | 1. A booking form allows users to select a service, provide details, and choose an available date and time. | A new booking form should allow users to select a service, enter details, and schedule a date and time. | The booking form works correctly, and bookings are created successfully. | Pass |
 | **US03** : As a registered user, I can update an existing booking, so that I can change the service details or reschedule it. | Verify that the user can edit a booking by updating details. | 1. An "Edit" button next to each booking opens the booking form pre-filled with existing data. 2. Validation ensures the new date and time do not conflict with other bookings. | The user should be able to edit a booking, with pre-filled details and conflict checking. | Editing is functional, pre-filled data is accurate, and validation prevents conflicts. | Pass |
 | **US04** : As a registered user, I can delete a booking, so that I can remove a scheduled service that I no longer need. | Verify that a user can delete a booking and that it is removed from the database. | 1. A "Delete" button is available for each booking, with a confirmation prompt. 2. The booking is permanently removed from the database after deletion. | The user should see a delete button, a confirmation prompt, and the booking should be removed. | The delete button works as expected, with confirmation and permanent removal from the database. | Pass |
-| **US05** : As a registered user, I can filter my bookings, so that I can easily find upcoming or past bookings.
+| **US05** : As a registered user, I can filter my bookings, so that I can easily find upcoming or past bookings. | Verify that the user can filter bookings by date, status, or service type. | 1. The bookings list includes a filter or search bar for upcoming or past services. 2. The filter works based on service type, date, or status. | The user should be able to filter bookings by criteria such as service type, date, or status. | Filtering works correctly for both past and upcoming bookings. | Pass |
+| **US06** : As a registered user, I can register for an account, so that I can manage my bookings on the platform. | Verify that users can register for an account. | 1. A registration form asks for the user’s name, email, and phone number. 2. Users must verify their email before accessing booking features. | Users should be able to register and must verify their email to access bookings. | The registration form works, and email verification is required. | Pass |
+| **US07** : As a registered user, I can log in to my account, so that I can access my bookings and make changes. | Verify that users can log in with valid credentials. | 1. Users are prompted for their username and password to log in. 2. Users who are logged in are redirected to the homepage with personalized options like "My Bookings." | Users should be able to log in and access their bookings. | Login works as expected, and the user is redirected to their dashboard. | Pass |
+| **US08** : As an authenticated user, I can log out, so that I can securely end my session on the platform. | Verify that users can log out and are redirected appropriately. | 1. The navigation bar shows a “Logout” button when the user is logged in. 2. After logout, the user is redirected to the homepage, and booking features are no longer accessible. | The user should see a "Logout" button, and booking features should be restricted after logout. | Logout works as expected, and the user is redirected with restricted access. | Pass |
+| **US09** : As a website visitor, I can view details of services before booking, so that I can understand the services and their pricing. | Verify that service details are visible on the homepage and in detail pages. | 1. The homepage displays a grid of services with a brief description and price. 2. Clicking on a service leads to a detailed page with more information and the option to book. | Visitors should see services displayed on the homepage with descriptions and detailed pages. | Services are visible on the homepage with descriptions, and detailed pages are accessible. | Pass | 
+| **US10** :  As a registered user, I can see notifications for booking conflicts, so that I can select another available date or time. | Verify that conflict notifications are shown when trying to book a time slot that’s already taken. | 1. The booking system checks for existing appointments at the selected time. 2. If there is a conflict, the user is informed and prompted to select another available slot. | Users should receive notifications of booking conflicts with available alternatives. | Conflict validation works, and users are informed of conflicts with suggestions. | Pass |
+
+__Summary of Testing__
+
+| **Category** | **Pass** | **Fail** | **Total Tests** |
+| ---- | ---- | ---- | ---- |
+| Functionality Testing | 10 | 0 | 10 |
+| Responsive Design | Pass | N/A | Tested on mobile, tablet, desktop (Chrome, Safari, Firefox) |
+| Performance Testing | Pass | N/A | Tested on mobile, tablet, desktop | 
+| Security Testing | Pass | N/A | CSRF, XSS, and SQL injection tested |
+
+__Overall Conclusion__
+All tested user stories and acceptance criteria passed successfully. The website provides a seamless user experience with intuitive navigation, responsive design across multiple devices, and strong security features for handling user bookings.
+
 
 
 
@@ -668,11 +686,44 @@ __Overall Design Goals__ The CSS design prioritizes:
 
 
 ### Create Application and Postgres DB on Heroku
-- 
+
+<details>
+<summary>App Creation On Heroku Dashboard</summary>
+
+![App dashboard on Heroku](static/testing-images/CreateApplicationAppOnHeroku.png)
+
+</details>
+
+<details>
+<summary>Connecting Postgres DB on Heroku</summary>
+
+![Postgres DB assignment variable to connect to Heroku](static/testing-images/ConnectingPostGresDatabaseOnHeroku.png)
+
+</details>
+
+
+
 ### Configure Cloudinary to host images used by the application
-- 
+
+The four AI generated images were uploaded to cloudinary then arranged according to the service features including the hero image.
+
+<details>
+<summary>Cloudinary Media Upload Dashboard</summary>
+
+![cloudinary media upload dashboard](static/testing-images/cloudinaryMediaProjectImagesUpload.png)
+
+</details>
+
+
+
 ### Connect the Heroku app to the GitHub repository
 
+<details>
+<summary>GitHub Repository Connection With Heroku App</summary>
+
+![Graphic of Heroku app connection with GitHub repository](static/testing-images/GitHubConnectionToHerokuPlatform.png)
+
+</details>
 
 ### Executing automated tests
 - 
