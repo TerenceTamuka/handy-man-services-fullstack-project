@@ -622,10 +622,6 @@ __Overall Design Goals__ The CSS design prioritizes:
   - This styling enhances the professionalism and user-friendliness of the web application, creating a modern and consistent user interface.
 
 
-### Automated Testing
-
-  - 
-
 ### Browser Compatibility
 
 - Chrome DevTools was used to test the responsiveness of the application on different screen sizes.  In addition, testing has been carried out on the following browsers :
@@ -690,8 +686,6 @@ __Configuring Cloudinary:__ Steps to configure Cloudinary for hosting images use
 
 __Linking the Heroku Application to the GitHub Repository:__ Instructions on connecting the Heroku app to the GitHub repository for streamlined deployments.
 
-__Running Automated Tests:__ Procedure for executing automated tests to ensure application functionality.
-
 __Final Deployment Process:__ A walkthrough of the final steps required for successful application deployment.
 
 ### How to Clone the Repository 
@@ -719,6 +713,37 @@ Follow the steps below to clone this repository and set up the application local
 
 ### Create Application and Postgres DB on Heroku
 
+__1. Log into Heroku:__ visit [heroku](https://dashboard.heroku.com/)
+
+__2. Create a New Application:__ In the Heroku dashboard, click the __Create new app button.__ If you have a new account, you’ll see a prompt on the screen to create an app. Otherwise, select New from the dropdown menu at the top right and choose Create a new app.
+
+__3. App Configuration:__ On the Create New App page, enter a unique name for your app and select a region, then click Create app.
+
+__4. Add Postgres Database:__ After creating the app, navigate to the __Resources__ tab. In the "Add-ons" section, search for Heroku Postgres. Choose it from the list and click Submit Order Form in the dialog that appears. 
+
+__5. Configure Environment Variables:__ Next, go to the Settings tab and click Reveal Config Vars. Ensure that the DATABASE_URL has been automatically configured.
+  - Add a new Config Var called DISABLE_COLLECTSTATIC and set its value to 1.
+  - Add another Config Var named SECRET_KEY and assign it a random string of characters (letters, numbers, and symbols).
+
+__6. Update settings py:__ Modify your settings.py file to use these environment variables for database configuration and secret key management:
+  - DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+  - SECRET_KEY = os.environ.get('SECRET_KEY')
+
+__7. Migrate the Database:__ In your Gitpod terminal, initialize the database schema by running the migration command:
+  - python3 manage.py migrate
+
+__8. Update Requirements:__ Ensure your __requirements.txt__ file includes all necessary dependencies by running:
+  - pip3 freeze --local > requirements.txt
+
+__9. Commit and Push Changes:__ Push any local modifications to GitHub by committing and pushing as usual:
+  - git add .
+  - git commit -m "Updated for Heroku deployment"
+  - git push
+
+__10. Run the Application Locally:__ To run the app on localhost, make sure the SECRET_KEY and DATABASE_URL environment variables are set in your env.py file.
+
+
+
 <details>
 <summary>App Creation On Heroku Dashboard</summary>
 
@@ -737,7 +762,15 @@ Follow the steps below to clone this repository and set up the application local
 
 ### Configure Cloudinary to host images used by the application
 
-The four AI generated images were uploaded to cloudinary then arranged according to the service features including the hero image.
+__1. Sign Up for Cloudinary:__ Visit the [Cloudinary](https://cloudinary.com/) website and create an account if you don't already have one. During registration, provide your name, email address, and set up a password. When prompted for your "primary interest," select Programmable Media for image and video API.
+After completing the sign-up process, verify your account through the confirmation email you receive. This will grant you access to your Cloudinary dashboard.
+
+__2. Get the API Environment Variable:__ Once in your Cloudinary dashboard, locate the __API Environment__ variable and copy its value by clicking the __Copy to clipboard button.__
+
+__3. Configure Cloudinary in Heroku:__ Log in to your [Heroku](https://dashboard.heroku.com/) account and navigate to the app’s Settings section. Click Reveal Config Vars to view and manage environment variables.
+Add a new Config Var with the name CLOUDINARY_URL and paste the value you copied from Cloudinary. Ensure you remove the "CLOUDINARY_URL=" prefix from the copied string before saving it.
+
+__4. Set Up for Local Deployment:__ To run the app locally, add the __CLOUDINARY_URL__ and its value to your env.py file so your application can use Cloudinary when running on localhost.
 
 <details>
 <summary>Cloudinary Media Upload Dashboard</summary>
@@ -757,8 +790,6 @@ The four AI generated images were uploaded to cloudinary then arranged according
 
 </details>
 
-### Executing automated tests
-- 
 
 ### Final Deployment steps
 Once code changes have been completed and tested on localhost, the application can be prepared for Heroku deployment as follows :
@@ -770,7 +801,7 @@ Once code changes have been completed and tested on localhost, the application c
 - On the Heroku dashboard go to the Deploy tab for the application and click on deploy branch
 - The Code Institute's "Django Blog Cheat Sheet" was a key resource used throughout the process of installing and configuring frameworks and libraries, setting up the database management system (DBMS), and preparing the application for deployment. : [CI Cheat Sheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf)
 
-#### The live link to the application can be found here - [Applet-gate Property Services LTD](https://handyman-services-fullstackapp-ba60a0c4d688.herokuapp.com/) 
+#### The live link to the application can be found here - [Apple-gate Property Services LTD](https://handyman-services-fullstackapp-ba60a0c4d688.herokuapp.com/) 
 
 
 ## Credits 
@@ -794,7 +825,7 @@ Once code changes have been completed and tested on localhost, the application c
 - The Josefin Sans font used was imported from [Google Fonts](https://fonts.google.com/)
 - Fontawesome was used for icons, including icons for user Icon when signed in and footer section social media links on GitHub, LinkedIn & twittwer- [Font Awesome](https://fontawesome.com/v4/icons/)
 - The applicaiton favicon logo was created on: [Favicon](https://favicon.io/logo-generator/) 
-
+- The project Mockup was produced on - [Am I Responsive](https://ui.dev/amiresponsive?url=https://handyman-services-fullstackapp-ba60a0c4d688.herokuapp.com/)
   
   
 ### Acknowledgments
