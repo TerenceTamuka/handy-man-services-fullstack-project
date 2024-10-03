@@ -621,6 +621,67 @@ __Overall Design Goals__ The CSS design prioritizes:
   - Responsiveness: The layout and elements are designed to be responsive, ensuring they adapt well to different screen sizes.
   - This styling enhances the professionalism and user-friendliness of the web application, creating a modern and consistent user interface.
 
+  <hr>
+
+- [Python Validator](https://pep8ci.herokuapp.com/)
+
+__Summary of Django Application Code__ This Django application provides a platform for users to book various handyman services. Below is an overview of the key components and functionalities implemented in the application.
+
+  __URL Routing__ The application includes a urlpatterns list that maps various URL patterns to their corresponding views:
+
+  - Home Page: Displays all available services.
+  - Service Detail Page: Shows detailed information about a specific service.
+  - User Bookings: Allows users to view their bookings.
+  - Booking Management: Users can create, update, and delete bookings for services.
+  - User Registration: New users can register for an account.
+
+__Models__ The application defines two main models:
+
+  - Service: Represents different handyman services with fields for name, price, description, and a featured image.
+  - Booking: Stores user bookings linked to specific services, capturing customer details and booking status. It includes validation to prevent overlapping bookings.
+
+__Forms__ The BookingForm is created using Django's ModelForm, allowing users to submit booking requests. It integrates with Summernote for rich text editing in the additional information field.
+
+__Views__ Key views include:
+
+  - Index View: Renders the homepage with all services.
+  - Service Detail View: Displays details of a selected service.
+  - Booking Views: Includes creating, updating, and deleting bookings, ensuring users can only manage their own bookings.
+  - User Registration View: Handles new user registrations and logging in after registration.
+
+__Admin Interface__ The Django admin interface is customized with:
+
+  - ServiceAdmin: Uses Summernote for editing service descriptions.
+  - BookingAdmin: Displays and filters bookings, with an action to approve multiple bookings.
+
+<details>
+<summary> Views.py Validation Result</summary>
+
+![Views.py validation report](static/testing-images/views-python-code-validation-result.png)
+
+</details>
+
+<details>
+<summary> URLs.py Validation Result</summary>
+
+![Urls.py Validation report](static/testing-images/urls-python-code-validation-result.png)
+
+</details>
+
+<details>
+<summary>Models.py Validation Result</summary>
+
+![Models.py Validation Report](static/testing-images/models-python-code-validation-result.png)
+
+</details>
+
+<details>
+<summary>Forms.py Validation Result</summary>
+
+![Forms.py Validation Report](static/testing-images/forms-python-code-validation-result.png)
+
+</details>
+
 
 ### Browser Compatibility
 

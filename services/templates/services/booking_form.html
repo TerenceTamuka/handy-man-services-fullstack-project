@@ -41,11 +41,6 @@
                     {% endif %}
                 {% endfor %}
 
-                <!-- Summernote editor for additional info -->
-                <div class="summernote-div">
-                    <textarea name="additional_info" id="id_additional_info" style="display: none;"></textarea> <!-- Hidden textarea -->
-                    <div id="summernote" style="width: 720px; height: 480px;"></div> <!-- Summernote editor container -->
-                </div>
 
                 <!-- Only show 'approved' field if the user is a superuser -->
                 {% if request.user.is_superuser %}
