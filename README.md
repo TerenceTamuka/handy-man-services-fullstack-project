@@ -625,7 +625,7 @@ __Overall Design Goals__ The CSS design prioritizes:
 
 - [Python Validator](https://pep8ci.herokuapp.com/)
 
-__Summary of Django Application Code__ This Django application provides a platform for users to book various handyman services. Below is an overview of the key components and functionalities implemented in the application.
+__Summary of Django Application Code__ This Django application provides a platform for users to book, manage and delete various handyman services. Below is an overview of the key components and functionalities implemented in the application.
 
   __URL Routing__ The application includes a urlpatterns list that maps various URL patterns to their corresponding views:
 
@@ -679,6 +679,27 @@ __Admin Interface__ The Django admin interface is customized with:
 <summary>Forms.py Validation Result</summary>
 
 ![Forms.py Validation Report](static/testing-images/forms-python-code-validation-result.png)
+
+</details>
+
+<details>
+<summary>Apps.py Validation Reult</summary>
+
+![Apps.py validation report](static/testing-images/apps-python-code-validation-result.png)
+
+</details>
+
+<details>
+<summary>Admin.py Validation Result</summary>
+
+![Apps.py validation report](static/testing-images/admin-python-cdoe-validation-result.png)
+
+</details>
+
+<details>
+<summary>URLs Applegate.py Validation Result</summary>
+
+![Applegate Urls validation report](static/testing-images/urls-applegate-validation-result.png)
 
 </details>
 

@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('my_bookings/', include('services.urls'), name = "services-urls"),
+    path('my_bookings/', include('services.urls'), name="services-urls"),
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),  # Login, logout
