@@ -703,6 +703,7 @@ __Admin Interface__ The Django admin interface is customized with:
 
 </details>
 
+<hr>
 
 ### Browser Compatibility
 
@@ -711,6 +712,7 @@ __Admin Interface__ The Django admin interface is customized with:
     - Firefox version 93.0 (64-bit)
     - Microsoft Edge 94.0.992.38 (64-bit)
  
+<hr>
     
 ### Manual Testing Test Cases and Results
 
@@ -740,21 +742,7 @@ __Summary of Testing__
 __Overall Conclusion__
 All tested user stories and acceptance criteria passed successfully. The website provides a seamless user experience with intuitive navigation, responsive design across multiple devices, and strong security features for handling user bookings.
 
-
-
-
-
-
-
-
-
-
-
-
-
-### Known bugs
-
-- Currently no known bugs.
+<hr>
 
 ## Deployment
 
@@ -895,6 +883,7 @@ Once code changes have been completed and tested on localhost, the application c
 
 #### The live link to the application can be found here - [Apple-gate Property Services LTD](https://handyman-services-fullstackapp-ba60a0c4d688.herokuapp.com/) 
 
+<hr>
 
 ## Credits 
 
@@ -906,6 +895,7 @@ Once code changes have been completed and tested on localhost, the application c
 
 - [Programming with Mosh](https://www.youtube.com/watch?v=rHux0gMZ3Eg) - Wacthed this tutorial to help me understand key concepts of templates, forms and models used in this project.
 
+<hr>
 
 ### Media 
 - The Josefin Sans font used was imported from [Google Fonts](https://fonts.google.com/)
@@ -913,7 +903,8 @@ Once code changes have been completed and tested on localhost, the application c
 - The applicaiton favicon logo was created on: [Favicon](https://favicon.io/logo-generator/) 
 - The project Mockup was produced on - [Am I Responsive](https://ui.dev/amiresponsive?url=https://handyman-services-fullstackapp-ba60a0c4d688.herokuapp.com/)
   
-  
+<hr>
+
 ### Acknowledgments
 
 - My uncle by the name of Trevor is the one who had the handyman services brand idea since he is the one who in the future will be carrying out the project services.
