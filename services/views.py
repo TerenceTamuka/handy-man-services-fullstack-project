@@ -120,6 +120,7 @@ def edit_booking(request, booking_id):
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()  # Save the changes
+            messages.success(request, 'Your Booking has been successfully updated!')
             return redirect('my_bookings')
 
     else:
