@@ -783,6 +783,16 @@ __4. Set Up for Local Deployment:__ To run the app locally, add the __CLOUDINARY
 
 ### Connect the Heroku app to the GitHub repository
 
+__1.__ Navigate to the "Deploy" tab on the Application Configuration page in Heroku.
+
+__2.__ Choose GitHub as your deployment method. If prompted, confirm the connection between Heroku and GitHub.
+
+__3.__ In the search bar, enter the name of your GitHub repository (for this project, it's [handy-man-services-fullstack-project](https://github.com/TerenceTamuka/handy-man-services-fullstack-project)) and click Connect to link the Heroku app with your repository.
+
+__4.__ Scroll down to the deployment options. You can either enable Automatic Deploys (to redeploy the app whenever changes are pushed to GitHub) or select Manual Deploy for on-demand deployments. This project opted for manual deployment.
+
+__5.__ To launch the application, return to the Application Configuration page and click the __Open App__ button.
+
 <details>
 <summary>GitHub Repository Connection With Heroku App</summary>
 
