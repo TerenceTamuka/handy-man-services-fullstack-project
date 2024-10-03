@@ -818,18 +818,12 @@ Once code changes have been completed and tested on localhost, the application c
 
 - Used this README https://github.com/elainebroche-dev/pf4-wayfarers-guided-hikes/blob/main/README.md as a base skeleton for my README.
 
-- [Chat GPT](https://chatgpt.com/) - AI tool used to generate the images used in the project website.
+- [Chat GPT](https://chatgpt.com/) - AI tool used to generate the images used in the project website. Also some of the coding ideas to make the app function in full.
 
 - [Telusko](https://www.youtube.com/watch?v=SIyxjRJ8VNY) - wacthed some django tutorials on this channel to help with my ideation developemnt.
 
 - [Programming with Mosh](https://www.youtube.com/watch?v=rHux0gMZ3Eg) - Wacthed this tutorial to help me understand key concepts of templates, forms and models used in this project.
 
-
-
-### Code 
-- 
-
-### Content 
 
 ### Media 
 - The Josefin Sans font used was imported from [Google Fonts](https://fonts.google.com/)
