@@ -152,18 +152,30 @@ A required feature was also implemented to ensure a user has provided both their
 
 </details>
 
-- *__Login/Logout__* 
+<details>
+<summary>Login/Logout Forms</summary> 
+
 ![login form](static/images/login-form.png)
 ![logout form](static/images/secure-logout-form.png)
 
--*__On-screen alerts__*
+</details>
+
+<details>
+<summary>On-screen alerts</summary>
+
 ![User login authentication - on screen message for incorrect details](static/images/on-screen-message-user-details-incorrect.png)
 ![Required information message](static/images/required-user-details-message.png)
 
-- *__Session Management:__*
+</details>
+
+<details>
+<summary>Session Management: Signed In and Signed out alerts</summary>
+
 ![feedback messsage for when user signs in](static/images/user-sign-in-feedback.png)
 
 ![feedback for when user logs out](static/images/logout-feedback-message.png)
+
+</details>
 
 <hr>
 
@@ -178,15 +190,26 @@ A *Confirm Booking* submit button is displayed at the bottom of the booking form
 
 Summernote was also implemented to allow authenticated users to use rich text when inputting their additional information regarding the booking.
 
+<details>
+<summary>Double Booking Prevention</summary>
 
-- *__Double Booking Prevention:__*
 ![Booking conflict message](static/images/bookingConflict-message.png)
 
-- *__Customised Date and time picker__*
+</details>
+
+<details>
+<summary>Customised Date and time picker</summary>
+
 ![Customised date and time picker graphic](static/images/date-time-picker-graphic.png)
 
--*__Summernote Rich Text Input panel__*
+</details>
+
+<details>
+<summary>Summernote Rich Text Input panel</summary>
+
 ![Summernote Rich Text input panel graphic](static/images/summernote-richtext-input.png)
+
+</details>
 
 <hr>
 
@@ -199,43 +222,83 @@ Each scheduled ticket will display key information such as __Service Title__, __
 
 The __Create, Read, Update and Delete__ functionality was implemented to ensure that if a user wants to cancel a ticket, a red __Cancel Booking__ nav button is shown at the top of the ticket. An __Edit Button__ was implemented incase a user wants to change the ticket information and once they confirm, the ticket information updates accordingly. Both the *Cancel Booking* and *Delete* buttons once they are clicked, a confirmation dialog is shown at the top modal window.
 
+<details>
+<summary>Booking Management:My Bookings Page, Confirmed Ticket & Awaiting Confirmation Ticket</summary>
 
-- *__Booking Management:__* 
 ![My Bookings Page Overview](static/images/my-bookings-page.png)
 
 ![Customer ticket info and Confirmed booking feature](static/images/customer-ticket-confirmed.png)
 
 ![Customer ticket info and Awaiting Confirmation booking feature](static/images/customer-ticket-awaiting-confirmation.png)
 
+</details>
 
-- *__CRUD (Create, Read, Update, Delete) Functionality:__*
+<details>
+<summary>CRUD (Create, Read, Update, Delete) Functionality</summary>
+
 ![Cancel booking nav button](static/images/cancel-booking.png)
 
 ![Edit or Delete ticket Button](static/images/edit-or-delete-buttons.png)
 
-__Super User - Booking Form with Approved Field View__
+</details>
+
+<details>
+
+<summary>Super User - Booking Form with Approved Field View</summary>
+
 ![Super User Booking Form](static/images/superUser-BookAservice-view.png)
 
-__Super User - Edit Booking Form with Approved Field View__
+</details>
+
+<details>
+
+<summary>Super User - Edit Booking Form with Approved Field View</summary>
+
 ![Super User Edit Booking Form](static/images/superUser-EditBooking-view.png)
 
-__Non Super User - Booking Form View__
+</details>
+
+<details>
+<summary>on Super User - Booking Form View</summary>
+
 ![Non Super User Booking Form](static/images/nonSuperUser-BookAservice-view.png)
 
-__Non Super User - Edit Booking Form View__
+</details>
+
+<details>
+<summary>Non Super User - Edit Booking Form View</summary>
+
 ![Non Super User Edit Booking Form](static/images/nonSuperUser-EditBooking-view.png)
 
-__Booking On Screen Confirmation Message__
+</details>
+
+<details>
+<summary>Booking On Screen Confirmation Message</summary>
+
 ![Booking confirmation on screen message](static/images/booking-confirmation-message.png)
 
-__Booking Deletion Confirmation Message__
+</details>
+
+<details>
+<summary>Booking Deletion Confirmation Message</summary>
+
 ![Deletion confirmation on screen message](static/images/confirm-delete-message.png)
 
-__Edit Booking Update Success Confirmation Message__
+</details>
+
+<details>
+<summary>Edit Booking Update Success Confirmation Message</summary>
+
 ![Edit booking success on screen message](static/images/editBookingSucessMessage.png)
 
-__Booking Deleted Confirmation Message__
+</details>
+
+<details>
+<summary>Booking Deleted Confirmation Message</summary>
+
 ![Booking deleted on screen message](static/images/BookingDeletionConfirmationMessage.png)
+
+</details>
 
 <hr>
 
@@ -248,17 +311,35 @@ Similarly, they can manage bookings, approve pending bookings, and modify or can
 Non-technical users (such as business managers or customer service representatives) can use the Django admin interface to manage services and bookings without needing to understand the underlying code.
 The admin panel’s auto-generated forms make it simple to add, edit, or delete entries, significantly reducing the learning curve.
 
-- *__Database Intergration:__* 
+<details>
+<summary>Database Intergration:</summary>
+
 ![Django full site Administration Page](static/images/django-site-administration.png)
 
-*__User Booking a service using Django admin page__*
+</details>
+
+<details>
+<summary>User Booking a service using Django admin page</summary>
+
 ![Django admin page for customer booking a service](static/images/django-admin-booking-form.png)
 
-*__User feedback to confirm that a booking was successful__*
+</details>
+
+<details>
+<summary>User feedback to confirm that a booking was successful</summary>
+
 ![Django admin successful booking confirmation feedback](static/images/django-admin-booking-success-feedback.png)
 
-*__Django Admin Page for manipulating bookings__*
+</details>
+
+<details>
+<summary>Django Admin Page for manipulating bookings</summary>
+
 ![Django admin Service bookings manipulation page](static/images/django-admin-manipulate-bookings.png)
+
+</details>
+
+<hr>
 
 __F07 Responsive Design with Bootstrap__
 
@@ -298,15 +379,26 @@ Building trust through content is vital for user engagement and retention. The w
 
  <br>
 
-__Bootstrap Integration:__
+<details>
+<summary>Bootstrap Integration:</summary>
+
 ![Bootstrap responsive design on smaller screens](static/images/bootstrap-responsive-design.png)
 
-__Social Proof with Hover Effect__
+</details>
+
+<details>
+<summary>Social Proof with Hover Effect</summary>
+
 ![Social Media Nav Links with hover effect](static/images/social-nav-links.png)
 
+</details>
 
-__Eye-Catching Theme:__
+<details>
+<summary>Eye-Catching Theme:</summary>
+
 ![Hover effect with theme color effect](static/images/styling-theme.png)
+
+</details>
 
 <hr>
 
@@ -315,8 +407,12 @@ __Eye-Catching Theme:__
 
 The User Stories in the [User Experience (UX)](#user-experience-ux) part of this document are numbered 1 to 10. The existing features are listed above as F01 to F07. Below is a traceability matrix cross-referencing the user stories with the features, illustrating which features support which stories :
 
+<details>
+<summary>Traceability Matrix Graphic</summary>
+
 ![User Story Feature Matrix](static/images/traceability-matrix-features-userstories.png)
 
+</details>
 
 
 
