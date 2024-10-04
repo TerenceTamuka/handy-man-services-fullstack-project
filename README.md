@@ -198,6 +198,9 @@ __Booking Deletion Confirmation Message__
 __Edit Booking Update Success Confirmation Message__
 ![Edit booking success on screen message](static/images/editBookingSucessMessage.png)
 
+__Booking Deleted Confirmation Message__
+![Booking deleted on screen message](static/images/BookingDeletionConfirmationMessage.png)
+
 <hr>
 
 __F06 PostgreSQL Database & Super User Creation__
