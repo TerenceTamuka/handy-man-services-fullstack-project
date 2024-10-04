@@ -81,9 +81,26 @@ The navigation bar provides a consistent design and placement across all pages, 
 
 Designed with responsiveness in mind, the navigation bar adapts seamlessly to various screen sizes. On smaller devices, it transforms into a compact 'hamburger' menu, allowing for smooth access to all the necessary links without cluttering the interface.
 
+<details>
+<summary>Unregistered User Navigation Bar View</summary>
+
 ![Navbar view for an unregistered user](static/images/navbar-unregistereduser-view.png)
+
+</details>
+
+<details>
+<summary>Registered User Navigation Bar View</summary>
+
 ![Navbar view for a registered user](static/images/navbar-registereduser-desktop-view.png)
+
+</details>
+
+<details>
+<summary>Smaller Devices Navigation Var View</summary>
+
 ![Navbar responsive view on smaller devices](static/images/navbar-responsive-view.png)
+
+</details>
 
 <hr>
 
@@ -91,14 +108,25 @@ Designed with responsiveness in mind, the navigation bar adapts seamlessly to va
 
 At the top of the landing page (home page) there is an area that includes an AI generated handyman photograph simulating the activities of given services and a text overlay which together clearly identify the purpose of the site as a place to find and book household services from a company called Apple-gate Property Services LTD.
 
+<details>
+<summary>Landing Page - Hero Image and Text Overlay</summary>
+
 ![Landing page with hero image and text](static/images/landingpage-name-text.png)
+
+</details>
+
 <hr>
 
 - __Booking Button__
 
 When an authenticated user is logged in, a __Book a Service__ button will be displayed at the bottom of each service column that displays a feature service image, service description and service price information.
 
+<details>
+<summary>Book a Service Button for Painting instance</summary>
+
 ![Booking button for authenticated user feature](static/images/book-button.png)
+
+</details>
 
 <hr>
 
@@ -110,10 +138,19 @@ Login and logout pages were created to facilitate full and secure authentication
 
 A required feature was also implemented to ensure a user has provided both their username and password fields.
 
-- *__Register or Sign in to book a service:__* 
+<details>
+<summary>Register or Sign in to book a service</summary>
+
 ![Registration form](static/images/registration-form.png)
 
+</details>
+
+<details>
+<summary>Unregistered User View Prompt for registration to book a Service</summary>
+
 ![Prompt for if user wants to book a service](static/images/sign-in-prompt-to-book.png)
+
+</details>
 
 - *__Login/Logout__* 
 ![login form](static/images/login-form.png)
@@ -142,7 +179,7 @@ A *Confirm Booking* submit button is displayed at the bottom of the booking form
 Summernote was also implemented to allow authenticated users to use rich text when inputting their additional information regarding the booking.
 
 
-- *__Booking Conflict:__*
+- *__Double Booking Prevention:__*
 ![Booking conflict message](static/images/bookingConflict-message.png)
 
 - *__Customised Date and time picker__*
@@ -169,7 +206,6 @@ The __Create, Read, Update and Delete__ functionality was implemented to ensure 
 ![Customer ticket info and Confirmed booking feature](static/images/customer-ticket-confirmed.png)
 
 ![Customer ticket info and Awaiting Confirmation booking feature](static/images/customer-ticket-awaiting-confirmation.png)
-
 
 
 - *__CRUD (Create, Read, Update, Delete) Functionality:__*
