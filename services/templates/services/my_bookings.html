@@ -29,7 +29,7 @@
                             <p>
                                 <strong>Service Info:</strong> {{ booking.service.description }}<br>
                                 <strong>Price:</strong> £{{ booking.service.price }}<br>
-                                <strong>Customer Additional Info:</strong> {{booking.additional_info | safe }}<br>
+                                <strong>Customer Additional Info:</strong> {{ booking.additional_info | safe }}<br>
                                 <strong>Date & Time:</strong> {{ booking.date_time|date:"F j, Y, g:i a" }}
                                 
                             </p>
